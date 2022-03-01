@@ -7,7 +7,7 @@
     <% @topics.each do |topic| %>
       <strong><%= topic.title %></strong>
         <div class="d-flex align-items-end justify-content-between pt-4">
-          <small class="text-right flex-shrink-0"><%= link_to "Read more", topic_path(topic), class: 'text-dark' %></small>
+          <small class="text-right flex-shrink-0"><%= link_to "Read more",  topic_subtopics_path(topic), class: 'text-dark' %></small>
         </div>
       <% end %>
   </div>
