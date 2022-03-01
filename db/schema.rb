@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
 
   create_table "subscriptions", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "subtopic_id", null: false
+    t.bigint "tile_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subtopic_id"], name: "index_subscriptions_on_subtopic_id"
+    t.index ["tile_id"], name: "index_subscriptions_on_tile_id"
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "subscriptions", "subtopics"
+  add_foreign_key "subscriptions", "tiles"
   add_foreign_key "subscriptions", "users"
   add_foreign_key "subtopics", "topics"
   add_foreign_key "tiles", "subtopics"
