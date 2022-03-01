@@ -17,18 +17,18 @@ ActiveRecord::Schema.define(version: 2022_02_28_153524) do
 
   create_table "subscriptions", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.bigint "subtopic_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["subtopic_id"], name: "index_subscriptions_on_subtopic_id"
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
   create_table "subtopics", force: :cascade do |t|
     t.string "title"
-    t.bigint "subscription_id", null: false
     t.bigint "topic_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subscription_id"], name: "index_subtopics_on_subscription_id"
     t.index ["topic_id"], name: "index_subtopics_on_topic_id"
   end
 
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 2022_02_28_153524) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "subscriptions", "subtopics"
   add_foreign_key "subscriptions", "users"
-  add_foreign_key "subtopics", "subscriptions"
   add_foreign_key "subtopics", "topics"
   add_foreign_key "tiles", "subtopics"
 end
