@@ -1,0 +1,11 @@
+  <div class="containerTitle">
+    <h2>Sub-topics</h2>
+  </div>
+  <div class="containerSubtopics">
+   <div class="row my-2 rowSubtopics">
+      <% @subtopics.each do |subtopic| %>
+       <strong><%= subtopic.title %></strong>
+       <small class="text-right flex-shrink-0"><%= link_to "See More", tiles_path(subtopic) %></small>
+    <% end %>
+    </div>
+</div>
