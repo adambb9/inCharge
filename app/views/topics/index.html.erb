@@ -1,0 +1,30 @@
+<div class="container mb-5">
+  <div class="d-flex align-items-center justify-content-between column mb-3">
+    <h3 class="mb-0" >Your feed</h3>
+</div>
+
+<div class="row my-2">
+      <% @topics.each do |topic| %>
+      <div class="col-12 col-sm-4 mb-4">
+        <div class="bg-white rounded shadow h-100">
+            <% topic.photos.each do |photo| %>
+              <% if topic.photos.empty? %>
+                <img src="https://www.fundaciontelefonica.com/wp-content/uploads/2018/10/expo-national-geographic.jpg", class="topic-img rounded-top">
+              <% else %>
+                <% if photo == topic.photos.first %>
+                  <%= cl_image_tag photo.key, class:"topic-img rounded-top" %>
+                <% end %>
+              <% end %>
+            <% end %>
+            <div class="p-3 rounded-bottom d-flex flex-column">
+              <strong><%= topic.title %></strong>
+              <p><%= topic.summary %></p>
+              <div class="d-flex align-items-end justify-content-between pt-4">
+                <small class="text-right flex-shrink-0"><%= link_to "Read more", topic_path(topic), class: 'text-dark' %></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
