@@ -1,0 +1,8 @@
+<h1> Your Tiles </h1>
+    <% @tiles.each do |tile| %>
+      <%= tile.id %>
+      <%= tile.title %>
+      <%= tile.summary %>
+      <%= tile.content %>
+      <%= link_to "See tile", subtopic_tile_path(@subtopic, tile) %>
+    <% end %>

@@ -31,7 +31,7 @@ puts "Topic seeded"
 Subtopic.create!(title: "World", topic_id: topic1.id)
 Subtopic.create!(title: "Regional", topic_id: topic1.id)
 Subtopic.create!(title: "Local", topic_id: topic1.id)
-Subtopic.create!(title: "Environental", topic_id: topic1.id)
+Subtopic.create!(title: "Environmental", topic_id: topic1.id)
 Subtopic.create!(title: "Politics", topic_id: topic1.id)
 #Sport
 Subtopic.create!(title: "Football", topic_id: topic3.id)
@@ -103,5 +103,5 @@ tile15 = Tile.create!(title: "A Guide to Carnival ('Carnestoltes')  24 February 
 tile15 = Tile.create!(title: "2021 was best year for Spanish home sales since 2007", summary: "The coronavirus pandemic might have energised a Spanish housing market that was running out of steam before the virus struck, which begs the question how long will that impetus last?", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: 32)
 tile16 = Tile.create!(title: "Renting in Spain: What’s the maximum amount a landlord can ask as a deposit?", summary: "Landlords are asking for larger deposits since the coronavirus pandemic. Why is this? Find out your rights!", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: 33)
 
-
+subscription1 = Subscription.create!()
 puts "DB seeded!"
