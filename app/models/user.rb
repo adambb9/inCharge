@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   has_many :subscriptions, dependent: :destroy
-  has_many :subtopics, through: :subscriptions
+  has_many :tiles, through: :subscriptions
 end

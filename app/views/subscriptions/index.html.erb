@@ -1,0 +1,6 @@
+<h1> Your Subscriptions </h1>
+  <% @subscriptions.each do |subscription| %>
+    <%= subscription.tile.title %>
+    <%= subscription.tile.summary %>
+  <br>
+  <% end %>

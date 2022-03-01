@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   resources :subtopics, only: [:index, :show, :create] do
     resources :tiles, only: [:index, :show, :destroy]
   end
+
+  resources :subscriptions, only: [:index, :show]
 end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

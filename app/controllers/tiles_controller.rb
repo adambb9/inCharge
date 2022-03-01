@@ -2,7 +2,6 @@ class TilesController < ApplicationController
   before_action :set_tile, only: [:show]
   before_action :set_subtopic, only: [:index, :show]
   def index
-    #@tiles = Tile.all
     @tiles = Tile.where(subtopic_id: params[:subtopic_id])
   end
 
