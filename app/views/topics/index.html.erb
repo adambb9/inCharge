@@ -1,0 +1,14 @@
+<div class="container mb-5">
+  <div class="d-flex align-items-center justify-content-between column mb-3">
+    <h3 class="mb-0" >Choose your topics</h3>
+  </div>
+
+  <div class="row my-2">
+    <% @topics.each do |topic| %>
+      <strong><%= topic.title %></strong>
+        <div class="d-flex align-items-end justify-content-between pt-4">
+          <small class="text-right flex-shrink-0"><%= link_to "Read more", topic_path(topic), class: 'text-dark' %></small>
+        </div>
+      <% end %>
+  </div>
+</div>
