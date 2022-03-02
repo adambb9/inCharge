@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   end
 
   resources :subtopics, only: [:index, :show, :create] do
-    resources :tiles, only: [:index, :show, :destroy]
+    resources :tiles, only: [:index, :destroy]
+  end
+  resources :tiles, only: :show do
+    resources :subscriptions, only: :create
   end
 
-  resources :subscriptions, except: [:create]
-  post '/subscriptions/', to: 'subscriptions#create', as: 'create'
+  resources :subscriptions, only: :index
 end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
