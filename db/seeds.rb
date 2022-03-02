@@ -100,8 +100,8 @@ tile13 = Tile.create!(title: "Get the lowdown on mortgages for first time buyers
 tile14 = Tile.create!(title: "Gal Vihara", summary: "Part of Parakramabahu I’s northern monastery, Gal Vihara is a group of beautiful Buddha images that probably marks the high point of Sinhalese rock carving.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic31.id)
 tile15 = Tile.create!(title: "A Guide to Carnival ('Carnestoltes')  24 February 2022 - 02 March 2022", summary: "A Background to Carnival in Barcelona and Catalunya.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic30.id)
 #Realestate
-tile15 = Tile.create!(title: "2021 was best year for Spanish home sales since 2007", summary: "The coronavirus pandemic might have energised a Spanish housing market that was running out of steam before the virus struck, which begs the question how long will that impetus last?", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
-tile16 = Tile.create!(title: "Renting in Spain: What’s the maximum amount a landlord can ask as a deposit?", summary: "Landlords are asking for larger deposits since the coronavirus pandemic. Why is this? Find out your rights!", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic33.id)
+tile16 = Tile.create!(title: "2021 was best year for Spanish home sales since 2007", summary: "The coronavirus pandemic might have energised a Spanish housing market that was running out of steam before the virus struck, which begs the question how long will that impetus last?", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
+tile17 = Tile.create!(title: "Renting in Spain: What’s the maximum amount a landlord can ask as a deposit?", summary: "Landlords are asking for larger deposits since the coronavirus pandemic. Why is this? Find out your rights!", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic33.id)
 
 subscription1 = Subscription.create!(user_id: user1.id, tile_id: tile1.id)
 subscription2 = Subscription.create!(user_id: user1.id, tile_id: tile2.id)
@@ -115,7 +115,7 @@ subscription8 = Subscription.create!(user_id: user2.id, tile_id: tile10.id)
 subscription9 = Subscription.create!(user_id: user2.id, tile_id: tile15.id)
 subscription10 = Subscription.create!(user_id: user2.id, tile_id: tile16.id)
 subscription11 = Subscription.create!(user_id: user2.id, tile_id: tile12.id)
-subscription12 = Subscription.create!(user_id: user2.id, tile_id: tile9.id)
+subscription12 = Subscription.create!(user_id: user2.id, tile_id: tile17.id)
 subscription13 = Subscription.create!(user_id: user2.id, tile_id: tile8.id)
 
 subscription14 = Subscription.create!(user_id: user3.id, tile_id: tile8.id)
@@ -137,4 +137,56 @@ subscription28 = Subscription.create!(user_id: user4.id, tile_id: tile13.id)
 subscription29 = Subscription.create!(user_id: user4.id, tile_id: tile14.id)
 subscription30 = Subscription.create!(user_id: user4.id, tile_id: tile6.id)
 puts "Subscription seeded!"
+
+
+tile1.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216011/inCharge/_123457130_mediaitem123457129_ycituh.jpg"), filename: 'rbank.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216256/inCharge/_123447177_hi074207788_karqzn.jpg"), filename: 'soldier.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216301/inCharge/_123458058_626c730f-3fc5-4afb-a355-7190b7a95ae6_j6kz4u.jpg"), filename: 'metro.jpeg', content_type: 'image/jpg'}])
+
+tile2.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216430/inCharge/skynews-brisbane-flooding_5689609_xnlygl.jpg"), filename: 'flood.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216471/inCharge/_91187771_14355154_10154568656338470_8351616187830956388_n_u0cfl7.jpg"), filename: 'koala.jpeg', content_type: 'image/jpg'}])
+
+tile3.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216685/inCharge/_123472855_pastrike_vh4omn.jpg"), filename: 'strike.jpeg', content_type: 'image/jpg'}])
+
+tile4.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217027/inCharge/59199509_303_pbylrl.jpg"), filename: 'smog.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646216874/inCharge/20200324_Global_average_temperature_-_NASA-GISS_HadCrut_NOAA_Japan_BerkeleyE_uwo31q.svg"), filename: 'climategraph.jpeg', content_type: 'image/jpg'}])
+
+tile5.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217167/inCharge/houses-of-parliament_houses-of-parliament-and-big-ben-copyright-visitlondoncom-image-courtesy-of-visitlondoncom_3b46e1728fbabca66763a8904c4424af_a0lsb1.jpg"), filename: 'parliament.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217194/inCharge/_117678731_23b2e90a-509b-4619-934c-1cf6c0a2799e_tg96ea.jpg"), filename: 'asylum.jpeg', content_type: 'image/jpg'}])
+
+tile6.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217349/inCharge/SN-Restart-16x9_Website_gomdrf.png"), filename: 'rugby1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217394/inCharge/3314749-67775248-2560-1440_moif8n.jpg"), filename: 'rugby2.jpeg', content_type: 'image/jpg'}])
+
+tile7.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217673/inCharge/skysports-novak-djokovic-daniil-medvedev_5280304_drrnh1.jpg"), filename: 'tennis1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217649/inCharge/how-novak-djokovic-defeated-daniil-medvedev-in-their-previous-melbourne-clash_rhslwo.jpg"), filename: 'tennis2.jpeg', content_type: 'image/jpg'}])
+
+tile9.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217874/inCharge/MV5BZGRhYjE2NWUtN2FkNy00NGI3LTkxYWMtMDk4Yjg5ZjI3MWI2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000__uwfxaw.jpg"), filename: 'film1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646217922/inCharge/El_Escuadr_n_Suicida-629689677-large_b50thr.jpg"), filename: 'film2.jpeg', content_type: 'image/jpg'}])
+
+tile10.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218098/inCharge/apollo-featired_nucvmd.jpg"), filename: 'theatre1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218173/inCharge/the-old-vic_vbhzym.jpg"), filename: 'theatre2.jpeg', content_type: 'image/jpg'}])
+
+tile11.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218627/inCharge/GettyImages-504112194_2400-930be4e2277c45cf9cfa5058053272b0_ohggvg.png"), filename: 'invest1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218655/inCharge/e56929b3bc230358250f6ef092710ead_juouav.png"), filename: 'invest2.jpeg', content_type: 'image/jpg'}])
+
+tile12.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218740/inCharge/what-sparked-32-rally-in-shiba-inu_i5wwk5.jpg"), filename: 'shiba1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218771/inCharge/screenshot-2021-10-27-at-19-50-11-shiba-inu-price-shib-chart-market-cap-and-info-coingecko_m4upn4.png"), filename: 'shiba2.jpeg', content_type: 'image/jpg'}])
+
+tile13.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218916/inCharge/960x0_pof3dz.jpg"), filename: 'mortgage1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646218944/inCharge/1003x-1_qdp6tb.jpg"), filename: 'mortgage2.jpeg', content_type: 'image/jpg'}])
+
+tile14.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219072/inCharge/gal-vihara_pgqorh.jpg"), filename: 'sri1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219164/inCharge/image101_asgwu7.jpg"), filename: 'sri2.jpeg', content_type: 'image/jpg'}])
+
+tile15.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219310/inCharge/final_destacada_carnaval_eufsqd.jpg"), filename: 'carnival1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219344/inCharge/carnaval-de-sitges_12_658x347_xnnbvh.jpg"), filename: 'carnival2.jpeg', content_type: 'image/jpg'}])
+
+tile16.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219504/inCharge/imagereader.aspx_uoy9db.jpg"), filename: 'sale1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219542/inCharge/home-sales-ine-notaries-mar-2021_oci2t6.jpg"), filename: 'sale2.jpeg', content_type: 'image/jpg'}])
+
+tile17.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219583/inCharge/house_rentals_ulkoqc.jpg"), filename: 'rent1.jpeg', content_type: 'image/jpg'},
+  {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219623/inCharge/clipping_Npc2Li_c9e6_wjiid9.jpg"), filename: 'rent2.jpeg', content_type: 'image/jpg'}])
+
+
+puts "Photos seeded!"
 puts "DB seeded!"
