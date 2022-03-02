@@ -1,8 +1,10 @@
-<h1> Your Tiles </h1>
+<h1> Available Tiles </h1>
     <% @tiles.each do |tile| %>
       <%= tile.id %>
       <%= tile.title %>
       <%= tile.summary %>
       <%= tile.content %>
+      <%= cl_image_tag tile.photos[0].key %>
       <%= link_to "See tile", subtopic_tile_path(@subtopic, tile) %>
     <% end %>
+<%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic)%>

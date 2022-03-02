@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :tiles, only: [:index, :show, :destroy]
   end
 
-  resources :subscriptions, only: [:index, :show]
+  resources :subscriptions, except: [:create]
+  post '/subscriptions/', to: 'subscriptions#create', as: 'create'
 end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
