@@ -1,6 +1,8 @@
 <h1> Your Subscriptions </h1>
   <% @subscriptions.each do |subscription| %>
-    <%= subscription.tile.title %>
-    <%= subscription.tile.summary %>
+    <h1><%= subscription.tile.title %></h1>
+    <h3><%= subscription.tile.summary %></h3>
+    <%= cl_image_tag subscription.tile.photos[0].key %>
+    <%= cl_image_tag subscription.tile.photos[1].key %>
   <br>
   <% end %>

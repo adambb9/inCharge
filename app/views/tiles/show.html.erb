@@ -1,3 +1,5 @@
 <h1> <%= @tile.title %> </h1>
 <h3><%= @tile.summary %></h3>
 <h3><%= @tile.content %></h3>
+<%=link_to 'Subscribe', create_path%>
+<%=link_to 'Back', subtopic_tiles_path(@subtopic)%>
