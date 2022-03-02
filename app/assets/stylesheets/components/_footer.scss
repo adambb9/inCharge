@@ -1,16 +1,16 @@
-body{
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  // min-height:100vh;
-}
+// body{
+//   text-align:center;
+//   display:flex;
+//   flex-direction:column;
+//   // min-height:100vh;
+// }
 
 .footer {
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 140vh;
+  min-height: 140px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   bottom: 0;
@@ -28,7 +28,8 @@ body{
 }
 .footer-links a:hover {
   opacity: 1;
+  color: rgb(0,112,112);
 }
-.footer .fa-heart {
-  color: #D23333;
+.footer .fa-bolt {
+  color: rgb(0,112,112);
 }
