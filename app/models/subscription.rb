@@ -2,5 +2,5 @@ class Subscription < ApplicationRecord
   belongs_to :user
   belongs_to :tile
 
-  validates :user_id, uniqueness: { scope: :tile_id }
+  validates_uniqueness_of :user, scope: :tile
 end
