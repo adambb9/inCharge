@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
-  before_action :set_tile, only: [:new, :create]
-  before_action :set_subtopic, only: [:new, :create]
+  before_action :set_tile, only: [ :create]
+  before_action :set_subtopic, only: [ :create]
   def index
     @subscriptions = Subscription.where(user_id: current_user.id)
   end
@@ -8,13 +8,9 @@ class SubscriptionsController < ApplicationController
   def show
   end
 
-  def new
-    @subscription = Subscription.new
-  end
-
   def create
-    @subscription.user = current_user
-    @subscritpion.tile = @tile
+    @subscription.user_id = current_user.id
+    @subscritpion.tile_id = @tile.id
     if @subscription.save!
       redirect_to subscriptions_path
     else

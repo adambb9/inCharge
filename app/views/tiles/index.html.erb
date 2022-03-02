@@ -7,4 +7,4 @@
       <%= cl_image_tag tile.photos[0].key %>
       <%= link_to "See tile", subtopic_tile_path(@subtopic, tile) %>
     <% end %>
-<%=link_to 'Back', topic_subtopics_path(@subtopic.topic)%>
+<%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic)%>
