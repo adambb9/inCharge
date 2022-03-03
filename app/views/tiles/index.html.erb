@@ -1,5 +1,13 @@
 <div class="container-tiles-page">
   <div class="container-tile-title row">
+  <% if @tiles.empty? %>
+    <div class="col-6">
+      <h1 class="subheader">Content coming soon ...</h1>
+    </div>
+    <div class="col-6 buttons">
+      <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic), class:"btn btn-success subtopic-btn"%>
+    </div>
+  <% else %>
     <div class="col-6">
       <h1 class="subheader"><%= @tiles[0].subtopic.topic.title  %>: <%= @tiles[0].subtopic.title  %></h1>
     </div>
@@ -23,4 +31,5 @@
         </div>
       <% end %>
   </div>
+  <% end %>
 </div>
