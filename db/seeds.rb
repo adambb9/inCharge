@@ -187,6 +187,5 @@ tile16.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/
 tile17.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219583/inCharge/house_rentals_ulkoqc.jpg"), filename: 'rent1.jpeg', content_type: 'image/jpg'},
   {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219623/inCharge/clipping_Npc2Li_c9e6_wjiid9.jpg"), filename: 'rent2.jpeg', content_type: 'image/jpg'}])
 
-
 puts "Photos seeded!"
 puts "DB seeded!"
