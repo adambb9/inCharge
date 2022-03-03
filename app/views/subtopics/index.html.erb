@@ -1,12 +1,24 @@
-  <div class="containerTitle">
+  <div class="containerTitle row">
+  <div class="col-6">
     <h2>Sub-topics</h2>
   </div>
-  <div class="containerSubtopics">
-   <div class="row my-2 rowSubtopics">
-      <% @subtopics.each do |subtopic| %>
-       <strong><%= subtopic.title %></strong>
-       <small class="text-right flex-shrink-0"><%= link_to "See More", subtopic_tiles_path(subtopic) %></small>
-    <% end %>
-    </div>
+  <div class="col-6">
+    <%=link_to 'Back to topics', topics_path, class: "btn btn-light btnSubtopic"%>
+  </div>
 </div>
-<%=link_to 'Back to topics', topics_path%>
+
+
+    <% @subtopics.each do |subtopic| %>
+      <div class="container subtopicContainer">
+      <div class="row">
+          <div class="col cardSubtopic">
+             <strong><%= subtopic.title %></strong>
+             <small ><%= link_to subtopic_tiles_path(subtopic) do %>
+              <i class="fa fa-plus" aria-hidden="true"></i>
+             <% end %>
+             </small>
+            </div>
+          <hr>
+        </div>
+    </div>
+  <% end %>
