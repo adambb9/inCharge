@@ -18,7 +18,7 @@
   margin-right: 0.8em;
   padding-top: 0;
  a {
-  color: rgb(63, 60, 60);
+  color: rgb(255, 255, 255);
   text-decoration: none;
  }
 }
@@ -31,4 +31,18 @@
     width: 80%;
     height: 80%;
   }
+}
+
+#navbar-greeting {
+  color: white;
+  font-weight: 100;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 0%;
+}
+
+.navbar-search {
+  align-items: center;
 }
