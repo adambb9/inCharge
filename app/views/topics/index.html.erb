@@ -1,15 +1,21 @@
-<div class="container mb-5">
-  <div class="d-flex align-items-center justify-content-between column mb-3">
-    <h3 class="mb-0" >Choose your topics</h3>
-  </div>
 
-  <div class="row my-2">
-    <% @topics.each do |topic| %>
-      <strong><%= topic.title %></strong>
-        <div class="d-flex align-items-end justify-content-between pt-4">
-          <small class="text-right flex-shrink-0"><%= link_to "Read more",  topic_subtopics_path(topic), class: 'text-dark' %></small>
-        </div>
-      <% end %>
+  <div class="containerTitleTopic row">
+  <div class="col-6">
+    <h2>Choose your topics</h2>
   </div>
 </div>
 
+ <% @topics.each do |topic| %>
+      <div class="container subtopicContainer">
+      <div class="row">
+          <div class="col cardSubtopic">
+             <strong><%= topic.title %></strong>
+             <small ><%= link_to topic_subtopics_path(topic) do %>
+              <i class="fa fa-plus" aria-hidden="true"></i>
+             <% end %>
+             </small>
+            </div>
+          <hr>
+        </div>
+    </div>
+  <% end %>

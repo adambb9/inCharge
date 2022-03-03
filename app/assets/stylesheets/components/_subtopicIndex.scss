@@ -1,19 +1,37 @@
 .containerTitle {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  color: white;
 }
 
-.rowSubtopics {
-  display: flex;
-  width: 50%;
-  align-items: end;
-  justify-content: space-between;
-}
-
-.containerSubtopics {
+.subtopicContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: white;
+  font-size: larger;
+  // margin-bottom: 1.25em;
+  hr {
+    min-width: 500px;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+      a:hover {
+        color: blue;
+        text-decoration: none;
+      }
 }
+
+.btnSubtopic {
+  margin-right: 5px;
+  margin-left: auto;
+  display: table;
+}
+// .cardSubtopic {
+//   background-color: #363D2F;
+// }

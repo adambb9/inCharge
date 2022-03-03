@@ -20,19 +20,23 @@ $desktop: 1024px;
 // }
 
 body {
-	//display: flex;
-	//justify-content: center;
-	//align-items: center;
-	//width: 100vw;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// width: 100vw;
 	// height: 100vh;
 	background-color: #363D2F;
 }
 
+<<<<<<< HEAD:app/assets/stylesheets/components/_tiles.scss
 
+=======
+>>>>>>> master:app/assets/stylesheets/components/_tilesPage.scss
 .card {
 	width: 400px;
 	margin: 10px;
 	background-color: white;
+
 
 	&:hover {
 		.card__caption {

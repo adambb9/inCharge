@@ -1,33 +1,38 @@
-<h1>IN CHARGE</h1>
-<p>Find your topics <%= link_to "HERE", topics_path, class: 'text-dark' %>!</p>
+<div class="container">
+  <div class="front-container">
+    <h1 id="title">inCharge</h1>
 
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 134px; height: 134px; transform: rotateY(0deg);"><style>
-     .line-grid1-a {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
-     .line-grid1-b {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
-     .line-grid1-c {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
-     .line-grid1-d {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
-     @keyframes line-grid1-draw {
-         0%{stroke-dashoffset: 180;}
-         20%{stroke-dashoffset: 180;}
-         60%{stroke-dashoffset: 0;}
-         100%{stroke-dashoffset: 0;}
-     }
-     @media (prefers-reduced-motion: reduce) {
-         .line-grid1-a, .line-grid1-b, .line-grid1-c, .line-grid1-d {
-             animation: none;
-         }
-     }
-    </style><path class="line-grid1-a stroke1 fill1"
-      d="M12 10H44C45.1046 10 46 10.8954 46 12V55C46 56.1046 45.1046
-      57 44 57H12C10.8954 57 10 56.1046 10 55V12C10 10.8954 10.8954 10 12 10Z"
-      fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;">
-      </path><path class="line-grid1-a stroke2 fill2"
-      d="M12 64H44C45.1046 64 46 64.8954 46 66V89C46 90.1046 45.1046
-      91 44 91H12C10.8954 91 10 90.1046 10 89V66C10 64.8954 10.8954 64 12 64Z"
-      fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path>
-      <path class="line-grid1-a stroke2 fill2" d="M56 10H88C89.1046 10 90 10.8954 90 12V35C90
-      36.1046 89.1046 37 88 37H56C54.8954 37 54 36.1046 54 35V12C54 10.8954 54.8954 10 56 10Z"
-      fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path>
-      <path class="line-grid1-a stroke1 fill1" d="M56 44H88C89.1046 44 90 44.8954 90 46V89C90
-      90.1046 89.1046 91 88 91H56C54.8954 91 54 90.1046 54 89V46C54 44.8954 54.8954 44 56 44Z"
-      fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path></svg>
+    <p id="sub-title">Find your topics <%= link_to "here", topics_path, class:"btn btn-success subtopic-btn"%>!</p>
+
+    <svg id="animate" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 134px; height: 134px; transform: rotateY(0deg);"><style>
+        .line-grid1-a {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
+        .line-grid1-b {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
+        .line-grid1-c {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
+        .line-grid1-d {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
+        @keyframes line-grid1-draw {
+            0%{stroke-dashoffset: 180;}
+            20%{stroke-dashoffset: 180;}
+            60%{stroke-dashoffset: 0;}
+            100%{stroke-dashoffset: 0;}
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .line-grid1-a, .line-grid1-b, .line-grid1-c, .line-grid1-d {
+                animation: none;
+            }
+        }
+        </style><path class="line-grid1-a stroke1 fill1"
+          d="M12 10H44C45.1046 10 46 10.8954 46 12V55C46 56.1046 45.1046
+          57 44 57H12C10.8954 57 10 56.1046 10 55V12C10 10.8954 10.8954 10 12 10Z"
+          fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;">
+          </path><path class="line-grid1-a stroke2 fill2"
+          d="M12 64H44C45.1046 64 46 64.8954 46 66V89C46 90.1046 45.1046
+          91 44 91H12C10.8954 91 10 90.1046 10 89V66C10 64.8954 10.8954 64 12 64Z"
+          fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path>
+          <path class="line-grid1-a stroke2 fill2" d="M56 10H88C89.1046 10 90 10.8954 90 12V35C90
+          36.1046 89.1046 37 88 37H56C54.8954 37 54 36.1046 54 35V12C54 10.8954 54.8954 10 56 10Z"
+          fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path>
+          <path class="line-grid1-a stroke1 fill1" d="M56 44H88C89.1046 44 90 44.8954 90 46V89C90
+          90.1046 89.1046 91 88 91H56C54.8954 91 54 90.1046 54 89V46C54 44.8954 54.8954 44 56 44Z"
+          fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path></svg>
+  </div>
+</div>

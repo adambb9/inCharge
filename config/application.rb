@@ -12,6 +12,7 @@ module InCharge
       generate.assets false
       generate.helper false
       generate.test_framework :test_unit, fixture: false
+      config.exceptions_app = self.routes
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1

@@ -8,6 +8,10 @@ class SubscriptionsController < ApplicationController
   def show
   end
 
+  def add_subscriptions
+    #create a function to autofill subscriptions when there are less than 10 subscriptions
+  end
+
   def create
     @subscription = Subscription.new
     @subscription.user = current_user

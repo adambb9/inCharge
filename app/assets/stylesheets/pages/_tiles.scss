@@ -1,0 +1,108 @@
+body {
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
+	//width: 100vw;
+	// height: 100vh;
+	background-color: #363D2F;
+}
+
+.container-tiles-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container-tile-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.container-tiles {
+  display: flex;
+  align-items: center;
+
+}
+
+.buttons {
+  text-align: right;
+}
+
+.subtopic-btn {
+  background-color: white;
+  color: #363D2F;
+  border: white;
+}
+
+.subtopic-btn:hover {
+  background-color: #363D2F;
+  color: white;
+  border: #363D2F;
+}
+
+.subheader {
+  color: white;
+}
+
+.container-tile-card {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+}
+
+.show-card-image {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tile-card {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.tile-card-image {
+  margin: 10px;
+}
+
+.tile-card-text {
+  padding-top: 20px;
+  color: white;
+  margin: 10px;
+}
+
+.tile-card-text h1 {
+  padding-bottom: 20px;
+}
+
+.tile-card-text h5 {
+  padding-bottom: 15px;
+}
+
+
+.subscribe-btn {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: #363D2F;
+  border: white;
+  width: 40%;
+  font-size: 30px;
+}
+
+.subscribe-btn:hover {
+  border: white;
+  border-width: 20px;
+  background-color: #363D2F;
+  color: white;
+}
+
+.center-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
