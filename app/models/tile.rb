@@ -5,5 +5,4 @@ class Tile < ApplicationRecord
   validates :title, :summary, :content, presence: true
   validates :title, length: { minimum: 6 }
   validates :summary, length: { minimum: 6 }
-
 end
