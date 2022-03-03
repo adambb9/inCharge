@@ -46,3 +46,12 @@
 .navbar-search {
   align-items: center;
 }
+
+.dropdown-menu.show {
+  background-color: #363D2F;
+  border-right-color: white;
+}
+
+.dropdown-item {
+  text-align: right;
+}

@@ -1,10 +1,11 @@
-<h1> Your Subscriptions </h1>
-  <% @subscriptions.each do |subscription| %>
-  <div></div>
-    <h1><%= subscription.tile.title %></h1>
+<div class="parent">
+  <% @subscriptions.each_with_index do |subscription, index| %>
+
+  <div class="topicsCard topicsCard-<%=index%>" style="background-image: url(<%= cl_image_path subscription.tile.photos[0].key%>);">
+    <h2><%= subscription.tile.title %></h2>
     <h3><%= subscription.tile.summary %></h3>
-    <%= cl_image_tag subscription.tile.photos[0].key %>
-    <%= cl_image_tag subscription.tile.photos[1].key %>
-    <%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %></small>
-  <br>
-  <% end %>
+      <%#= cl_image_tag subscription.tile.photos[1].key %>
+        <%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %></small>
+    </div>
+     <% end %>
+</div>
