@@ -3,7 +3,40 @@ body {
 	background-color: #363D2F;
 }
 
+#title {
+  font-size: 200px;
+  color: white;
+}
+
+#sub-title {
+  font-size: 80px;
+  color: white;
+  a {
+    color: #363D2F;
+    text-decoration: none;
+    font-size: 80px;
+  }
+  a:hover {
+    color: white;
+    background-color: #363D2F;
+    text-decoration: none;
+    font-size: 80px;
+  }
+}
+
+#animate {
+  color: white;
+}
 .h1 .h2 .h2 {
+  color: white;
+}
+.front-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-dark {
   color: white;
 }
 
