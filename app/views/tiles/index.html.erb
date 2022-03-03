@@ -1,20 +1,26 @@
-<h1>HI</h1>
-
-<div class="container">
-	<div class="card">
+<div class="container-tiles-page">
+  <div class="container-tile-title row">
+    <div class="col-6">
+      <h1 class="subheader"><%= @tiles[0].subtopic.topic.title  %>: <%= @tiles[0].subtopic.title  %></h1>
+    </div>
+    <div class="col-6 buttons">
+      <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic), class:"btn btn-success subtopic-btn"%>
+    </div>
+  </div>
+  <div class="container-tiles">
       <% @tiles.each do |tile| %>
-        <%= tile.id %>
-        <figure class="card__thumb">
-        <div class="card__image"> <%= cl_image_tag tile.photos[0].key %></div>
-          <figcaption class="card__caption">
-          <h2 class="card__title"><%= tile.title %></h2>
-            <p class="card__snippet"><%= tile.summary %></p>
-        <%= tile.content %>
+      	<div class="card">
+          <figure class="card__thumb">
+            <div class="card__image"> <%= cl_image_tag tile.photos[0].key %>
+              <figcaption class="card__caption">
+                <h2 class="card__title"><%= tile.title %></h2>
+                <p class="card__snippet"><%= tile.summary %></p>
 
-        <%= link_to "read more", tile_path(tile)%>
+                <%= link_to "read more", tile_path(tile), class:"card__button"%>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
       <% end %>
-  <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic)%>
-          </figcaption>
-		  </figure>
   </div>
 </div>
