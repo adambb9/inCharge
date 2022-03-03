@@ -7,17 +7,30 @@
       <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
     </div>
   </div>
-  <div class="container-tile-card col-12">
-    <div class="col-6 tile-card-col">
-      <%= cl_image_tag @tile.photos[0].key, class:"show-card-image" %>
+  <div class="container">
+    <div class="container-tile-card">
+    <div class="row">
+      <div class="col-12">
+        <div class="tile-card">
+          <div class="tile-card-image col-6">
+            <%= cl_image_tag @tile.photos[0].key, class:"show-card-image" %>
+          </div>
+          <div class="tile-card-text col-6 ">
+            <h1> <%= @tile.title %> </h1>
+            <h5><%= @tile.summary %></h5>
+            <p><%= @tile.content %></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-6 tile-card-col">
-      <h1> <%= @tile.title %> </h1>
-
-      <h3><%= @tile.summary %></h3>
-      <h3><%= @tile.content %></h3>
-      <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post%>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-12">
+      <hr>
+        <div class="center-btn">
+          <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"btn btn-success subscribe-btn"%>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
