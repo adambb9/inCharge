@@ -2,3 +2,4 @@
 <h3><%= @tile.summary %></h3>
 <h3><%= @tile.content %></h3>
 <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post%>
+<%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id)%>

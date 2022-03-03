@@ -102,7 +102,7 @@ tile15 = Tile.create!(title: "A Guide to Carnival ('Carnestoltes')  24 February 
 #Realestate
 tile16 = Tile.create!(title: "2021 was best year for Spanish home sales since 2007", summary: "The coronavirus pandemic might have energised a Spanish housing market that was running out of steam before the virus struck, which begs the question how long will that impetus last?", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
 tile17 = Tile.create!(title: "Renting in Spain: What’s the maximum amount a landlord can ask as a deposit?", summary: "Landlords are asking for larger deposits since the coronavirus pandemic. Why is this? Find out your rights!", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic33.id)
-
+puts "Tiles created"
 subscription1 = Subscription.create!(user_id: user1.id, tile_id: tile1.id)
 subscription2 = Subscription.create!(user_id: user1.id, tile_id: tile2.id)
 subscription3 = Subscription.create!(user_id: user1.id, tile_id: tile14.id)
@@ -126,13 +126,13 @@ subscription18 = Subscription.create!(user_id: user3.id, tile_id: tile11.id)
 subscription19 = Subscription.create!(user_id: user3.id, tile_id: tile10.id)
 subscription20 = Subscription.create!(user_id: user3.id, tile_id: tile3.id)
 subscription21 = Subscription.create!(user_id: user3.id, tile_id: tile4.id)
-subscription22 = Subscription.create!(user_id: user3.id, tile_id: tile5.id)
+subscription22 = Subscription.create!(user_id: user3.id, tile_id: tile2.id)
 
 subscription23 = Subscription.create!(user_id: user4.id, tile_id: tile4.id)
 subscription24 = Subscription.create!(user_id: user4.id, tile_id: tile3.id)
 subscription25 = Subscription.create!(user_id: user4.id, tile_id: tile11.id)
 subscription26 = Subscription.create!(user_id: user4.id, tile_id: tile9.id)
-subscription27 = Subscription.create!(user_id: user4.id, tile_id: tile11.id)
+subscription27 = Subscription.create!(user_id: user4.id, tile_id: tile17.id)
 subscription28 = Subscription.create!(user_id: user4.id, tile_id: tile13.id)
 subscription29 = Subscription.create!(user_id: user4.id, tile_id: tile14.id)
 subscription30 = Subscription.create!(user_id: user4.id, tile_id: tile6.id)

@@ -1,5 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_action :set_tile, only: [ :create]
+  before_action :set_subscription, only: [ :destroy]
   def index
     @subscriptions = Subscription.where(user_id: current_user.id)
   end
@@ -25,9 +26,15 @@ class SubscriptionsController < ApplicationController
   end
 
   def destroy
+    @subscription.destroy
+    redirect_to subscriptions_path
   end
 
   private
+
+  def set_subscription
+    @subscription = Subscription.find(params[:id])
+  end
 
   def set_tile
     @tile = Tile.find(params[:tile_id])
