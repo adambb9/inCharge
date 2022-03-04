@@ -36,7 +36,7 @@
         <div class="col-12">
         <hr>
           <div class="center-btn">
-            <%= link_to "Unsubscribe", subscription_path(@subscription.tile.subtopic_id), method: :delete, class:"btn btn-success subscribe-btn" %></small>
+            <%= link_to "Unsubscribe", subscription_path(@subscription.id), method: :delete, data: { confirm: "Click OK to unsubscribe and pick a new topic for your feed!" }, class:"btn btn-success subscribe-btn" %></small>
           </div>
         </div>
       </div>
