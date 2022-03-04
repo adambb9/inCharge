@@ -77,6 +77,8 @@ subtopic42 = Subtopic.create!(title: "Dogs", topic_id: topic9.id)
 subtopic43 = Subtopic.create!(title: "Cats", topic_id: topic9.id)
 subtopic44 = Subtopic.create!(title: "Birds", topic_id: topic9.id)
 subtopic45 = Subtopic.create!(title: "Elephants", topic_id: topic9.id)
+
+subtopic46 = Subtopic.create!(title: "Weather", topic_id: topic2.id)
 puts "Subtopic seeded"
 #Tiles
 #News
@@ -88,7 +90,6 @@ tile5 = Tile.create!(title: "Ministers defeated over asylum seeker and citizensh
 #Sport
 tile6 = Tile.create!(title: "Six Nations 2022: Unstoppable France, disarray in Dublin and confused England", summary: "Another round of Six Nations rugby is over and there are just three teams left in the title race with two games to go.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic7.id)
 tile7 = Tile.create!(title: "Daniil Medvedev: How the new men's world number one overtook Novak Djokovic", summary: "New men's world number one Daniil Medvedev says the only way to make him angry away from the tennis court is to knock on his hotel door at 6am seven days in a row. ", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic8.id)
-tile8 = Tile.create!(title: "Daniil Medvedev: How the new men's world number one overtook Novak Djokovic", summary: "New men's world number one Daniil Medvedev says the only way to make him angry away from the tennis court is to knock on his hotel door at 6am seven days in a row. ", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic8.id)
 #Culture
 tile9 = Tile.create!(title: "The Best Movies of 2021, Ranked by Tomatometer", summary: "Rotten Tomatoes is collecting every new Certified Fresh movie into one list, creating our guide to the best movies of 2021. Among them you’ll find blockbusters (Shang-Chi), documentaries (Lily Topples the World), awards contenders (The Green Knight), the cutting-edge in horror (The Night House).", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic21.id)
 tile10 = Tile.create!(title: "Cast and creatives for Mike Bartlett's The 47th at the Old Vic announced", summary: "The play opens at the end of March ", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic20.id)
@@ -97,11 +98,27 @@ tile11 = Tile.create!(title: "The 2 Best ETFs for Dividends", summary: "These tw
 tile12 = Tile.create!(title: "Can Shiba Inu Reach $1?", summary: "A monstrous jump seems unlikely.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic25.id)
 tile13 = Tile.create!(title: "Get the lowdown on mortgages for first time buyers", summary: "Your home may be repossessed if you do not keep up repayments on your mortgage.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic26.id)
 #Travelling
-tile14 = Tile.create!(title: "Gal Vihara", summary: "Part of Parakramabahu I’s northern monastery, Gal Vihara is a group of beautiful Buddha images that probably marks the high point of Sinhalese rock carving.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic31.id)
-tile15 = Tile.create!(title: "A Guide to Carnival ('Carnestoltes')  24 February 2022 - 02 March 2022", summary: "A Background to Carnival in Barcelona and Catalunya.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic30.id)
+tile14 = Tile.create!(title: "Gal Vihara", summary: "Part of Parakramabahu I’s northern monastery, Gal Vihara is a group of beautiful Buddha images that probably marks the high point of Sinhalese rock carving.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
+tile15 = Tile.create!(title: "A Guide to Carnival ('Carnestoltes')  24 February 2022 - 02 March 2022", summary: "A Background to Carnival in Barcelona and Catalunya.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic31.id)
 #Realestate
-tile16 = Tile.create!(title: "2021 was best year for Spanish home sales since 2007", summary: "The coronavirus pandemic might have energised a Spanish housing market that was running out of steam before the virus struck, which begs the question how long will that impetus last?", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
+tile16 = Tile.create!(title: "2021 was best year for Spanish home sales since 2007", summary: "The coronavirus pandemic might have energised a Spanish housing market that was running out of steam before the virus struck, which begs the question how long will that impetus last?", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic34.id)
 tile17 = Tile.create!(title: "Renting in Spain: What’s the maximum amount a landlord can ask as a deposit?", summary: "Landlords are asking for larger deposits since the coronavirus pandemic. Why is this? Find out your rights!", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic33.id)
+#news2
+tile18 = Tile.create!(title: "Roman’s empire: how the seeds of Abramovich’s demise were there all along", summary: "Almost 20 years after his high profile purchase, the oligarch is looking to sell Chelsea. Here’s the story of how it unravelled", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic1.id)
+tile19 = Tile.create!(title: "As U.S. and European businesses cut ties with Russia, Chinese tech firms remain silent", summary: "American firms such as Apple and Disney have reduced their business in Russia after the country invaded Ukraine but Chinese technology firms have remained silent on the issue.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic1.id)
+#weather
+tile20 = Tile.create!(title: "Barcelona", summary: "Friday 17:00", content: "Partly Cloudy 16°C", subtopic_id: subtopic46.id)
+#destination2
+tile21 = Tile.create!(title: "Grand Teton National Park", summary: "Park in Yellowstone & Grand Teton National Parks", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
+tile22 = Tile.create!(title: "Wat Arun", summary: "Top choice Buddhist Temple in Ko Ratanakosin & Thonburi", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
+#tech
+tile23 = Tile.create!(title: "If AI Is Predicting Your Future, Are You Still Free?", summary: "Part of being human is being able to defy the odds. Algorithmic prophecies undermine that.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic40.id)
+tile24 = Tile.create!(title: "The History of Predicting the Future", summary: "Humans have long tried to determine the shape of what’s to come. But even the most advanced technology can’t solve the fundamental issues with predictions.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic40.id)
+tile25 = Tile.create!(title: "Crime Prediction Keeps Society Stuck in the Past", summary: "So long as algorithms are trained on racist historical data and outdated values, there will be no opportunities for change.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic40.id)
+
+
+
+
 puts "Tiles created"
 subscription1 = Subscription.create!(user_id: user1.id, tile_id: tile1.id)
 subscription2 = Subscription.create!(user_id: user1.id, tile_id: tile2.id)
@@ -116,9 +133,9 @@ subscription9 = Subscription.create!(user_id: user2.id, tile_id: tile15.id)
 subscription10 = Subscription.create!(user_id: user2.id, tile_id: tile16.id)
 subscription11 = Subscription.create!(user_id: user2.id, tile_id: tile12.id)
 subscription12 = Subscription.create!(user_id: user2.id, tile_id: tile17.id)
-subscription13 = Subscription.create!(user_id: user2.id, tile_id: tile8.id)
+subscription13 = Subscription.create!(user_id: user2.id, tile_id: tile7.id)
 
-subscription14 = Subscription.create!(user_id: user3.id, tile_id: tile8.id)
+subscription14 = Subscription.create!(user_id: user3.id, tile_id: tile13.id)
 subscription15 = Subscription.create!(user_id: user3.id, tile_id: tile5.id)
 subscription16 = Subscription.create!(user_id: user3.id, tile_id: tile6.id)
 subscription17 = Subscription.create!(user_id: user3.id, tile_id: tile7.id)
@@ -136,6 +153,11 @@ subscription27 = Subscription.create!(user_id: user4.id, tile_id: tile17.id)
 subscription28 = Subscription.create!(user_id: user4.id, tile_id: tile13.id)
 subscription29 = Subscription.create!(user_id: user4.id, tile_id: tile14.id)
 subscription30 = Subscription.create!(user_id: user4.id, tile_id: tile6.id)
+
+subscription31 = Subscription.create!(user_id: user1.id, tile_id: tile20.id)
+subscription32 = Subscription.create!(user_id: user2.id, tile_id: tile20.id)
+subscription33 = Subscription.create!(user_id: user3.id, tile_id: tile20.id)
+subscription33 = Subscription.create!(user_id: user4.id, tile_id: tile20.id)
 puts "Subscription seeded!"
 
 
@@ -186,6 +208,19 @@ tile16.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/
 
 tile17.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219583/inCharge/house_rentals_ulkoqc.jpg"), filename: 'rent1.jpeg', content_type: 'image/jpg'},
   {io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646219623/inCharge/clipping_Npc2Li_c9e6_wjiid9.jpg"), filename: 'rent2.jpeg', content_type: 'image/jpg'}])
+
+tile18.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646382763/inCharge/2021-01-25T132108Z_167137623_RC21FL9XYKXQ_RTRMADP_3_SOCCER-ENGLAND-LAMPARD_yc2eib.jpg"), filename: 'worldnews2.jpeg', content_type: 'image/jpg'}])
+
+tile19.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646382822/inCharge/150615095702-alibaba-780x439_blrlkg.jpg"), filename: 'worldnews3.jpeg', content_type: 'image/jpg'}])
+
+tile20.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646383533/inCharge/clouds_from_above_x0jwvi.jpg"), filename: 'weather1.jpeg', content_type: 'image/jpg'}])
+
+tile21.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646384854/inCharge/shutterstockRF_325784873.jpg_xu4eey.jpg"), filename: 'destination2.jpeg', content_type: 'image/jpg'}])
+tile22.photos.attach([{io: URI.open("https://lp-cms-production.imgix.net/2020-11/500pxRF_241509159.jpg?auto=compress&crop=center&fit=crop&format=auto&h=832&w=1920"), filename: 'destination3.jpeg', content_type: 'image/jpg'}])
+
+tile23.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646385352/inCharge/960x0_nlxlku.jpg"), filename: 'future1.jpeg', content_type: 'image/jpg'}])
+tile24.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646385606/inCharge/Crystal-Ball-Large-Transparent-Glass-Ball-Lucky-Rainbow-Photo-Ball-Decoration-Ball.jpg_Q90.jpg__rgidpo.jpg"), filename: 'future2.jpeg', content_type: 'image/jpg'}])
+tile25.photos.attach([{io: URI.open("https://ichef.bbci.co.uk/news/640/cpsprodpb/7E99/production/_96690423_original.jpg"), filename: 'future3.jpeg', content_type: 'image/jpg'}])
 
 puts "Photos seeded!"
 puts "DB seeded!"
