@@ -1,4 +1,7 @@
 <div class="parent">
+
+<div class="line1"></div>
+
   <% @subscriptions.each_with_index do |subscription, index| %>
 
   <div class="topicsCard topicsCard-<%=index%>" style="background-image: url(<%= cl_image_path subscription.tile.photos[0].key%>);">
