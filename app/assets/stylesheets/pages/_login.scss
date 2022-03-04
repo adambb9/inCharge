@@ -1,0 +1,55 @@
+.form {
+  color: white;
+  width: 400px;
+  padding: 64px 15px 24px;
+  margin: 0 auto;
+}
+
+
+.form-control {
+  background-color: transparent;
+  border: 1px solid white;
+  font-weight: 200;
+  border-radius: 0px;
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 0px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+
+.form-actions .btn {
+  width: 100%;
+  display: block;
+  padding: 5px 16px;
+  background: transparent;
+  border: 1px solid white;
+  color: #fff;
+  letter-spacing: 0.1em;
+  border-radius: 0px;
+  font-size: 25px;
+}
+
+.form-control:focus {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #f7f7f7;
+  outline: 0;
+  box-shadow: -8px 8px 0 0rem white;
+}
+
+.form-actions .btn:focus {
+
+  box-shadow: -8px 8px 0 0rem white;
+}
+
+.slinks a {
+  margin-top: 10px;
+  display: inline-flex;
+  justify-content: left;
+  align-items: baseline;
+  color: white;
+  text-decoration: underline;
+}

@@ -4,9 +4,9 @@
 
   <% @subscriptions.each_with_index do |subscription, index| %>
 
-  <div class="topicsCard topicsCard-<%=index%>" style="background-image: url(<%= cl_image_path subscription.tile.photos[0].key%>);">
+  <div class="topicsCard topicsCard-<%=index%>" id="card-img", style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path subscription.tile.photos[0].key%>);">
     <h2><%= subscription.tile.title %></h2>
-    <h3><%= subscription.tile.summary %></h3>
+    <h3><%#= subscription.tile.summary %></h3>
       <%#= cl_image_tag subscription.tile.photos[1].key %>
         <%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, class: "btn btn-ghost" %></small>
         <%= link_to "Read More", subscription_path(subscription), method: :get, class: "btn btn-ghost" %></small>
