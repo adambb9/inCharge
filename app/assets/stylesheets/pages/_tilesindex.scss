@@ -1,0 +1,44 @@
+
+
+.big-card {
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: white;
+  height: 50vh;
+
+}
+
+.big-card-text {
+  padding: 16px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.big-card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.big-card h2 {
+  font-size: 2em;
+  color: white;
+}
+
+.big-card h3 {
+  font-size: medium;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+.btn-ghost {
+  background-color: none;
+  color: white;
+  border-color: white;
+  border-radius: 0%;
+}

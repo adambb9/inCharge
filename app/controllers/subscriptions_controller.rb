@@ -27,11 +27,14 @@ class SubscriptionsController < ApplicationController
   end
 
   def create
-    @subscription = Subscription.new
-    @subscription.user = current_user
-    @subscription.tile = @tile
-    if @subscription.save
-      redirect_to subscriptions_path
+    subscriptions = Subscription.where(user_id: current_user.id)
+    if subscriptions.count < 10
+      @subscription = Subscription.new
+      @subscription.user = current_user
+      @subscription.tile = @tile
+      if @subscription.save
+        redirect_to subscriptions_path
+      end
     else
       redirect_to subtopic_tiles_path(@tile.subtopic_id)
     end
