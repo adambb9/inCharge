@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   match "/404", to: "errors#not_found", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
 
+  get "/about", to: "pages#about"
+
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -17,6 +19,6 @@ Rails.application.routes.draw do
     resources :subscriptions, only: :create
   end
 
-  resources :subscriptions, only: [:index, :destroy]
+  resources :subscriptions, only: [:index, :destroy, :show]
 end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

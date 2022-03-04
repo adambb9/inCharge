@@ -1,16 +1,26 @@
+
 <div class="container">
   <div class="row">
     <% if @tiles.empty? %>
-      <div class="col-6">
-        <h1 class="subheader">Content coming soon ...</h1>
+      <div class="container-tile-title row">
+        <div class="col-6">
+          <h1 class="subheader">Content coming soon ...</h1>
+        </div>
+        <div class="col-6 buttons">
+          <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic), class:"btn btn-success subtopic-btn"%>
+        </div>
       </div>
-      <div class="col-6 buttons">
-        <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic), class:"btn btn-success subtopic-btn"%>
-      </div>
+
     <% else %>
-      <div class="col-6">
-        <h1 class="subheader"><%= @tiles[0].subtopic.topic.title  %>: <%= @tiles[0].subtopic.title  %></h1>
+      <div class="container-tile-title row">
+        <div class="col-6">
+          <h1 class="subheader"><%= @tiles[0].subtopic.topic.title  %>: <%= @tiles[0].subtopic.title  %></h1>
+        </div>
+        <div class="col-6 buttons">
+          <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic), class:"btn btn-success subtopic-btn"%>
+        </div>
       </div>
+
       <div class="col-6 buttons">
         <%=link_to 'Back to subtopics', topic_subtopics_path(@subtopic.topic), class:"btn btn-success subtopic-btn"%>
       </div>
@@ -26,6 +36,7 @@
             <div>
               <%= link_to "read more", tile_path(tile), class:"btn btn-ghost"%>
             </div>
+
           </div>
         </div>
       </div>
