@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_action :set_tile, only: [ :create]
-  before_action :set_subscription, only: [ :destroy]
+  before_action :set_subscription, only: [ :destroy, :show]
   def index
     autofill_subscriptions
     @subscriptions = Subscription.where(user_id: current_user.id)
