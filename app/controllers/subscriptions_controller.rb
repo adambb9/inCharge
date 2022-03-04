@@ -2,7 +2,7 @@ class SubscriptionsController < ApplicationController
   before_action :set_tile, only: [ :create]
   before_action :set_subscription, only: [ :destroy]
   def index
-    self.autofill_subscriptions
+    autofill_subscriptions
     @subscriptions = Subscription.where(user_id: current_user.id)
   end
 
@@ -14,7 +14,6 @@ class SubscriptionsController < ApplicationController
     subscriptions = Subscription.where(user_id: current_user.id).pluck(:id)
     available_tiles = Tile.all.pluck(:id)
     usable_tiles = available_tiles.reject {|w| subscriptions.include? w}
-    #create a function to autofill subscriptions when there are less than 10 subscriptions
     if subscriptions.count < 10
       number_to_increase = 10 - subscriptions.count
       number_to_increase.times do
@@ -46,7 +45,7 @@ class SubscriptionsController < ApplicationController
 
   def destroy
     @subscription.destroy
-    redirect_to subscriptions_path
+    redirect_to topics_path
   end
 
   private
