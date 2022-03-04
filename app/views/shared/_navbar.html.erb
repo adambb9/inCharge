@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+      <img src="https://freesvg.org/img/logo-lightning.png" />
     <% end %>
 
 
@@ -28,11 +28,10 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://avatars.githubusercontent.com/u/95916189?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Topics", topics_path, id: "nav-link", class: "dropdown-item"%>
               <%= link_to "Home", root_path, id: "home-link", class: "dropdown-item" %>
               <%= link_to "Dashboard", subscriptions_path, id: "nav-link", class: "dropdown-item" %>
+              <%= link_to "Topics", topics_path, id: "nav-link", class: "dropdown-item"%>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              <%= link_to "Dashboard", subscriptions_path, id: "nav-link", class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
