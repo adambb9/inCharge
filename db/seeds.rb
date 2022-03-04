@@ -78,7 +78,7 @@ subtopic43 = Subtopic.create!(title: "Cats", topic_id: topic9.id)
 subtopic44 = Subtopic.create!(title: "Birds", topic_id: topic9.id)
 subtopic45 = Subtopic.create!(title: "Elephants", topic_id: topic9.id)
 
-subtopic46 = Subtopic.create!(title: "Weather", topic_id: topic2.id)
+subtopic46 = Subtopic.create!(title: "Current Weather", topic_id: topic2.id)
 puts "Subtopic seeded"
 #Tiles
 #News
