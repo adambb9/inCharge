@@ -1,16 +1,19 @@
 <div class="parent">
 
+<h3 class="five-min">5 MIN READ</h3>
+
 <div class="line1"></div>
+<div class="line2"></div>
 
   <% @subscriptions.each_with_index do |subscription, index| %>
 
-  <div class="topicsCard topicsCard-<%=index%>" id="card-img", style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path subscription.tile.photos[0].key%>);">
+  <div class="card-img topicsCard topicsCard-<%=index%>" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path subscription.tile.photos[0].key%>);">
+
     <h2><%= subscription.tile.title %></h2>
     <h3><%#= subscription.tile.summary %></h3>
       <%#= cl_image_tag subscription.tile.photos[1].key %>
-
-        <%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, data: { confirm: "Click OK to unsubscribe and pick a new topic for your feed!" }, class: "btn btn-ghost" %></small>
-        <%= link_to "Read More", subscription_path(subscription), method: :get, class: "btn btn-ghost" %></small>
+        <small class="Unsubscribe"><%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, data: { confirm: "Click OK to unsubscribe and pick a new topic for your feed!" }, class: "btn btn-ghost" %></small>
+        <small class="read-more"><%= link_to "Read More", subscription_path(subscription), method: :get, class: "btn btn-ghost" %></small>
     </div>
      <% end %>
 
