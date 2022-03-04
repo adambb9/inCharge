@@ -36,7 +36,7 @@
         <div class="col-12">
         <hr>
           <div class="center-btn">
-            <%=link_to 'Subscribe', tile_subscriptions_path(@subscription.tile), method: :post, class:"btn btn-success subscribe-btn"%>
+            <%= link_to "Unsubscribe", subscription_path(@subscription.tile.subtopic_id), method: :delete, class:"btn btn-success subscribe-btn" %></small>
           </div>
         </div>
       </div>
