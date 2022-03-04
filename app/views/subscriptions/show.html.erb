@@ -5,14 +5,14 @@
         <h1 class="subheader">Content coming soon ...</h1>
       </div>
       <div class="col-6 buttons">
-        <%=link_to 'Back to all tiles', subtopic_tiles_path(@subscription.tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
+        <%=link_to 'Back to all subscriptions', subscriptions_path(@subscription.tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
       </div>
     <% else %>
       <div class="col-6">
         <h1 class="subheader"><%= @subscription.tile.subtopic.topic.title  %>: <%= @subscription.tile.subtopic.title  %></h1>
       </div>
       <div class="col-6 buttons">
-        <%=link_to 'Back to all tiles', subtopic_tiles_path(@subscription.tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
+        <%=link_to 'Back to all subscriptions', subscriptions_path(@subscription.tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
       </div>
     </div>
     <div class="container">
