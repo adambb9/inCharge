@@ -5,7 +5,8 @@
     <h2><%= subscription.tile.title %></h2>
     <h3><%= subscription.tile.summary %></h3>
       <%#= cl_image_tag subscription.tile.photos[1].key %>
-        <%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %></small>
+        <%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, class: "btn btn-ghost" %></small>
     </div>
      <% end %>
+
 </div>
