@@ -30,17 +30,7 @@ body {
   text-align: right;
 }
 
-.subtopic-btn {
-  background-color: white;
-  color: #363D2F;
-  border: white;
-}
 
-.subtopic-btn:hover {
-  background-color: #363D2F;
-  color: white;
-  border: #363D2F;
-}
 
 .subheader {
   color: white;
@@ -82,14 +72,13 @@ body {
   padding-bottom: 15px;
 }
 
-
 .subscribe-btn {
   display: flex;
   justify-content: center;
   background-color: white;
   color: #363D2F;
   border: white;
-  width: 40%;
+
   font-size: 30px;
 }
 
@@ -105,4 +94,45 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+
+.subscribe-btn {
+  background-color: white;;
+  border: none;
+  color: #363D2F;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+.subscribe-btn:before,
+.subscribe-btn:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.subscribe-btn:before {
+  border-top: 2px solid white;
+  right: 0;
+  top: -4px;
+}
+
+.subscribe-btn:after {
+  border-bottom: 2px solid white;
+  bottom: -4px;
+  left: 0;
+}
+
+.subscribe-btn:hover:before,
+.subscribe-btn:hover:after {
+  width: 100%;
+  text-decoration: none;
+  background-color: #363D2F;
+  color: white;
 }

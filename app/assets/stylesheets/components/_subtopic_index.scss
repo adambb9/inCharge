@@ -35,3 +35,56 @@
 // .cardSubtopic {
 //   background-color: #363D2F;
 // }
+
+
+.animated-border-button:hover {
+  border: white;
+  border-width: 20px;
+  background-color: #363D2F;
+  color: white;
+}
+.animated-border-button {
+  margin-right: 5px;
+  margin-left: auto;
+  display: table;
+  background-color: white;
+  border: none;
+  color: #363D2F;
+  border: white;
+  outline: none;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.animated-border-button:before,
+.animated-border-button:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.animated-border-button:before {
+  border-top: 2px solid white;
+  right: 0;
+  top: -4px;
+}
+
+.animated-border-button:after {
+  border-bottom: 2px solid white;
+  bottom: -4px;
+  left: 0;
+  text-decoration: none;
+}
+
+.animated-border-button:hover:before,
+.animated-border-button:hover:after {
+  width: 100%;
+  text-decoration: none;
+  background-color: #363D2F;
+  color: white;
+}
