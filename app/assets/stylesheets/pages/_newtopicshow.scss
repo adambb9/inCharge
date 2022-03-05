@@ -1,0 +1,98 @@
+.image-mosaic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+  width: 100%;
+}
+
+.tiles-link {
+  color: white;
+  text-decoration: none;
+}
+
+.card-mosaic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  perspective: 100rem;
+  margin: 2rem;
+  box-shadow: none;
+  background: none;
+}
+
+@media screen and (min-width: 600px) {
+  .card-mosaic-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-mosaic-wide {
+    grid-column: span 2 / auto;
+  }
+}
+
+.card-mosaic-side {
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:2rem;
+  color: white
+}
+
+.card-mosaic-side.back {
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%);
+}
+
+.card-mosaic-side.front {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card-mosaic:hover .card-mosaic-side.front {
+  transform: rotateY(180deg);
+}
+
+.card-mosaic:hover .card-mosaic-side.back {
+  transform: rotateY(0deg);
+}
+
+.card-mosaic-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.sibling-fade {
+  text-decoration: none;
+  color: white;
+}
+
+.sibling-fade:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  color: white;
+}
