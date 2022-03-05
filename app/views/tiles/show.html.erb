@@ -6,14 +6,14 @@
           <h1 class="subheader">Content coming soon ...</h1>
         </div>
         <div class="col-6 buttons">
-          <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
+          <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"animated-border-button"%>
         </div>
       <% else %>
         <div class="col-6">
           <h1 class="subheader"><%= @tile.subtopic.topic.title  %>: <%= @tile.subtopic.title  %></h1>
         </div>
         <div class="col-6 buttons">
-          <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"btn btn-success subtopic-btn"%>
+          <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"animated-border-button"%>
         </div>
       </div>
       <div class="container">
@@ -37,7 +37,7 @@
           <div class="col-12">
           <hr>
             <div class="center-btn">
-              <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"btn btn-success subscribe-btn"%>
+              <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"subscribe-btn"%>
             </div>
           </div>
         </div>
