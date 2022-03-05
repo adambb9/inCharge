@@ -48,3 +48,57 @@ body {
 .a:hover {
   color: chocolate;
 }
+
+.welcome-btn {
+  background-color: white;
+  color: #363D2F;
+  border: white;
+}
+
+.welcome-btn:hover {
+  border: white;
+  border-width: 20px;
+  background-color: #363D2F;
+  color: white;
+}
+
+
+.welcome-btn {
+  background-color: white;;
+  border: none;
+  color: #363D2F;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+.welcome-btn:before,
+.welcome-btn:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.welcome-btn:before {
+  border-top: 2px solid white;
+  right: 0;
+  top: -4px;
+}
+
+.welcome-btn:after {
+  border-bottom: 2px solid white;
+  bottom: -4px;
+  left: 0;
+}
+
+.welcome-btn:hover:before,
+.welcome-btn:hover:after {
+  width: 100%;
+  text-decoration: none;
+  background-color: #363D2F;
+  color: white;
+}
