@@ -1,0 +1,65 @@
+
+#avatar-profile {
+  text-align: right;
+  border-radius: 50%;
+  width: 300px;
+}
+
+
+.animated-border-button-profile:hover {
+  border: #363D2F;
+  border-width: 20px;
+  background-color: white;
+  color: #363D2F;
+}
+.animated-border-button-profile {
+  margin-right: 5px;
+  margin-left: auto;
+  display: table;
+  background-color: #363D2F;
+  border: none;
+  color: white;
+  border: #363D2F;
+  outline: none;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.animated-border-button-profile:before,
+.animated-border-button-profile:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.animated-border-button-profile:before {
+  border-top: 2px solid #363D2F;
+  right: 0;
+  top: -4px;
+}
+
+.animated-border-button-profile:after {
+  border-bottom: 2px solid #363D2F;
+  bottom: -4px;
+  left: 0;
+  text-decoration: none;
+}
+
+.animated-border-button-profile:hover:before,
+.animated-border-button-profile:hover:after {
+  width: 100%;
+  text-decoration: none;
+  background-color: white;
+  color: #363D2F;
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
