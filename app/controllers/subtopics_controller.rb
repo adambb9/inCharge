@@ -1,6 +1,7 @@
 class SubtopicsController < ApplicationController
   before_action :set_subtopic, only: [:show]
   def index
+    @topics = Topic.all
     @subtopics = Subtopic.where(topic_id: params[:topic_id])
   end
 
@@ -10,7 +11,7 @@ class SubtopicsController < ApplicationController
   private
 
   def set_topic
-    @topictopic = Subtopic.find(params[:topic_id])
+    @topic = Subtopic.find(params[:topic_id])
   end
 
   def set_subtopic
