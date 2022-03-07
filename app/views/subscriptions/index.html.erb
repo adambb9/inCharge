@@ -1,9 +1,7 @@
 <div class="parent">
 
-<h3 class="five-min">5 MIN READ</h3>
 
-<div class="line1"></div>
-<div class="line2"></div>
+<%# <div class="line2"></div> %>
 
 <div class="weather-box">
  <div class="weather">
@@ -13,8 +11,8 @@
      <div class="icons8-sun"></div>
 </div>
 
-<div id="box1"></div>
-<div id="box2"></div>
+<%# <div id="box1"></div> %>
+<%# <div id="box2"></div> %>
 
   <% @subscriptions.each_with_index do |subscription, index| %>
 
@@ -27,6 +25,13 @@
         <small class="Unsubscribe"><%= link_to "Unsubscribe", subscription_path(subscription), method: :delete, data: { confirm: "Click OK to unsubscribe and pick a new topic for your feed!" }, class: "btn btn-ghost" %></small>
         <small class="read-more"><%= link_to "Read More", subscription_path(subscription), method: :get, class: "btn btn-ghost" %></small>
     </div>
+
+<% if index == 0%>
+    <div class="five-min">
+  <h3 class="five-min-header">5 MIN READ</h3>
+  <div class="line1"></div>
+</div>
+<% end %>
      <% end %>
 
 </div>
