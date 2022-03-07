@@ -4,3 +4,19 @@
   right: 16px;
   z-index: 1000;
 }
+
+.alert-info {
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  padding: 5px;
+  border-radius: 0%;
+}
+
+
+.alert-danger {
+  color: white;
+  background-color: transparent;
+  border-color: #feb7b9;
+  border-radius: 0%;
+}

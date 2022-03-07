@@ -1,7 +1,6 @@
 
 #avatar-profile {
   text-align: right;
-  border-radius: 50%;
   width: 300px;
 }
 
@@ -59,7 +58,16 @@
 }
 .profile-info {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   flex-direction: column;
+}
+
+
+.profile-extrainfo {
+  color: white;
+  font-family: 'Archivo Narrow', sans-serif;
+  border-style: solid;
+  border-bottom: 1px;
+  border-color: white;
 }
