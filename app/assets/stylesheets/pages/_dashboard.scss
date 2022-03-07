@@ -166,7 +166,14 @@
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row: 2;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: whitesmoke;
+  .form-control {
+    color: black;
+    border-color: black;
+  } .form-control:focus {
+    color: black;
+    border-color: black;
+  }
 }
 
 .weather-container {
