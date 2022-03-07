@@ -1,11 +1,20 @@
-<div class="container">
+<div class="homecontainer">
   <div class="front-container">
-    <h1 id="title">inCharge</h1>
+
+    <h2 id="sub-title">make the internet yours</h2>
     <br>
+    <h1 id="title">be inCharge</h1>
 
-    <p id="sub-title">Find your topics <%= link_to "here", topics_path, class:"welcome-btn"%>!</p>
 
-    <svg id="animate" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 134px; height: 134px; transform: rotateY(0deg);"><style>
+
+
+
+<%
+=begin %>    <p id="sub-title">choose your topics  <%#= link_to "here", topics_path, class:"welcome-btn"%>!</p>
+
+
+
+  <svg id="animate" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 134px; height: 134px; transform: rotateY(0deg);"><style>
         .line-grid1-a {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
         .line-grid1-b {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
         .line-grid1-c {animation:line-grid1-draw 2s infinite; stroke-dasharray: 180;}
@@ -35,5 +44,9 @@
           <path class="line-grid1-a stroke1 fill1" d="M56 44H88C89.1046 44 90 44.8954 90 46V89C90
           90.1046 89.1046 91 88 91H56C54.8954 91 54 90.1046 54 89V46C54 44.8954 54.8954 44 56 44Z"
           fill="#none" stroke="#000" stroke-width="1.0px" style="animation-duration: 2s;"></path></svg>
-  </div>
+ <%
+=end %>
+
+
+ </div>
 </div>

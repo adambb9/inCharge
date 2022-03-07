@@ -45,6 +45,13 @@
 
 .navbar-search {
   align-items: center;
+  width: 15em;
+  height: 2em;
+}
+
+#search {
+  color: azure;
+  box-shadow: none;
 }
 
 .dropdown-menu.show {
@@ -54,4 +61,11 @@
 
 .dropdown-item {
   text-align: right;
+}
+
+
+.searchrow {
+  width: 57em;
+  display: flex;
+  justify-items: start;
 }

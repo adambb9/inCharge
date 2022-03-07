@@ -13,8 +13,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-                  <div class="navbar-search">
-            <div class="row"></div>
+         <div class="searchrow">
+                  <div class="navbar-search" id="search">
+
               <%= form_tag topics_path, method: :get do %>
                 <%= text_field_tag :query,
                   params[:query],
@@ -23,6 +24,7 @@
                 %>
               <%= submit_tag "Go", class: "btn btn-dark" %>
               <% end %>
+          </div>
           </div>
         <h2 id= "navbar-greeting">your top stories today</h1>
           <li class="nav-item dropdown">
