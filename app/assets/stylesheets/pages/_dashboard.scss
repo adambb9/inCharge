@@ -19,6 +19,7 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-content: flex-end;
+  overflow: hidden;
 }
 
 
@@ -160,14 +161,22 @@
   padding-bottom: 2em;
 }
 
+// Weather section
 .weather-box {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row: 2;
-  height: 10em;
-  width: 13em;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
+.weather-container {
+  display: flex;
+  width: fit-content;
+  height: 60%;
+  padding: 5px;
+  margin-bottom: 1em;
+  overflow: auto;
+}
 
 .weather {
   display: flex;
