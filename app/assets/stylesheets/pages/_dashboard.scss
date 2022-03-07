@@ -194,15 +194,35 @@
   // padding-bottom: 2em;
 }
 
+// Weather section
 .weather-box {
   grid-column-start: 3;
+
   grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
   // height: 10em;
   // width: 13em;
+
+  background-color: whitesmoke;
+  .form-control {
+    color: black;
+    border-color: black;
+  } .form-control:focus {
+    color: black;
+    border-color: black;
+  }
+
 }
 
+.weather-container {
+  display: flex;
+  width: fit-content;
+  height: 60%;
+  padding: 5px;
+  margin-bottom: 1em;
+  overflow: auto;
+}
 
 .weather {
   display: flex;
