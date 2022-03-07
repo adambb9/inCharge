@@ -4,7 +4,7 @@
 <%# <div class="line2"></div> %>
 
 <div class="weather-box">
- <div class="container" data-controller="weather" data-weather-openweather-api-key-value="<%= ENV["OPENWEATHER_API_KEY"] %>">
+ <div class="container weather-container" data-controller="weather" data-weather-openweather-api-key-value="<%= ENV["OPENWEATHER_API_KEY"] %>">
  <div class="row">
    <form class="d-flex my-5" data-action="submit->weather#fetchWeather">
                 <input type="text" placeholder="Enter city" class="form-control flex-grow-1" data-weather-target="input">

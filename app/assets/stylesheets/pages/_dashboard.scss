@@ -196,7 +196,6 @@
 // Weather section
 .weather-box {
   grid-column-start: 3;
-
   grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
@@ -215,12 +214,7 @@
 }
 
 .weather-container {
-  display: flex;
-  width: fit-content;
-  height: 60%;
-  padding: 5px;
-  margin-bottom: 1em;
-  overflow: auto;
+  margin-bottom: 2em;
 }
 
 .weather {
