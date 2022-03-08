@@ -39,6 +39,7 @@ export default class extends Controller {
   }
 
   #updateCard(data) {
+    console.log(data);
     this.iconTarget.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
     this.iconTarget.classList.remove("d-none")
     this.temperatureTarget.innerText = `${Math.round(data.main.temp)} °C`
