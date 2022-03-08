@@ -72,3 +72,22 @@
   max-height: 10%;
   border-width: 1px;
 }
+
+.suggestions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.articleTopicsCard {
+  font-size: x-small;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 6px 16px 52px 24px;
+  color: white;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  overflow: hidden;
+  text-decoration: none;
+}
