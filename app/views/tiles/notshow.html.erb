@@ -1,0 +1,48 @@
+<%# <div class="container">
+<h1 class="subheader">Content coming soon ...</h1>
+  <div class="container-tiles-page">
+    <div class="container-tile-title row">
+      <% if @tile.nil? %>
+        <%# <div class="col-6">
+          <h1 class="subheader">Content coming soon ...</h1>
+        </div>
+        <div class="col-6 buttons">
+          <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"animated-border-button"%>
+        <%# </div>
+      <%# <% else %>
+        <%# <div class="col-6">
+          <h1 class="subheader"><%= @tile.subtopic.topic.title  %>: <%= @tile.subtopic.title  %></h1>
+        <%# </div>
+        <div class="col-6 buttons">
+          <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"animated-border-button"%>
+        <%# </div>
+      </div>
+      <div class="container">
+        <div class="container-tile-card">
+        <div class="row">
+          <div class="col-12"> %>
+            <%# <div class="tile-card">
+              <div class="tile-card-image col-6">
+                <%= cl_image_tag @tile.photos[0].key, class:"show-card-image" %>
+              <%# </div> %>
+              <%# <div class="tile-card-text col-6 ">
+                <h1> <%= @tile.title %> </h1> %> %>
+                <%# <h5><%= @tile.summary %></h5> %>
+                <%# <p><%= @tile.content %></p>
+              <%# </div>
+            </div> %>
+          <%# </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+          <hr>
+            <div class="center-btn">
+              <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"subscribe-btn"%> %>
+            <%# </div> %> %>
+          <%# </div> %> %> %>
+        <%# </div>
+      <% end %>
+    <%# </div>
+  </div> %>
+<%# </div> %> %> %> %> %> %>
