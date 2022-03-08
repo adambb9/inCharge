@@ -208,7 +208,6 @@ tile18.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/
 
 tile19.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646382822/inCharge/150615095702-alibaba-780x439_blrlkg.jpg"), filename: 'worldnews3.jpeg', content_type: 'image/jpg'}])
 
-tile20.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646383533/inCharge/clouds_from_above_x0jwvi.jpg"), filename: 'weather1.jpeg', content_type: 'image/jpg'}])
 
 tile21.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646384854/inCharge/shutterstockRF_325784873.jpg_xu4eey.jpg"), filename: 'destination2.jpeg', content_type: 'image/jpg'}])
 tile22.photos.attach([{io: URI.open("https://lp-cms-production.imgix.net/2020-11/500pxRF_241509159.jpg?auto=compress&crop=center&fit=crop&format=auto&h=832&w=1920"), filename: 'destination3.jpeg', content_type: 'image/jpg'}])
