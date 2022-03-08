@@ -10,7 +10,12 @@
           <h1 class="subheader"><%= @subscription.tile.subtopic.topic.title  %>: <%= @subscription.tile.subtopic.title  %></h1>
           <%=link_to 'Back to all subscriptions', subscriptions_path(@subscription.tile.subtopic_id), class:"animated-border-button"%>
       </div>
-                <%= cl_image_tag @subscription.tile.photos[0].key, class:"show-card-image" %>
+                 <% if @subscription.tile.picture_url.nil? %>
+                    <%= cl_image_tag @subscription.tile.photos[0].key, class:"show-card-image" %>
+                  <% else %>
+                    <%= image_tag @subscription.tile.picture_url, class:"show-card-image" %>
+                 <% end %>
+
 
 <div class="text-div">
                 <h1 id="art-title"> <%= @subscription.tile.title %> </h1>

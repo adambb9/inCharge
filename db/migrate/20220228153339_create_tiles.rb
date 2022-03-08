@@ -4,6 +4,10 @@ class CreateTiles < ActiveRecord::Migration[6.1]
       t.string :title
       t.text :summary
       t.text :content
+      t.string :picture_url
+      t.string :source
+      t.string :author
+      t.string :url
       t.references :subtopic, null: false, foreign_key: true
 
       t.timestamps
