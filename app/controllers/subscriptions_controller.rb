@@ -14,8 +14,8 @@ class SubscriptionsController < ApplicationController
     subscriptions = Subscription.where(user_id: current_user.id).pluck(:id)
     available_tiles = Tile.all.pluck(:id)
     usable_tiles = available_tiles.reject {|w| subscriptions.include? w}
-    if subscriptions.count < 10
-      number_to_increase = 10 - subscriptions.count
+    if subscriptions.count < 9
+      number_to_increase = 9 - subscriptions.count
       number_to_increase.times do
         subscription = Subscription.new
         id = usable_tiles.sample
@@ -28,7 +28,7 @@ class SubscriptionsController < ApplicationController
 
   def create
     subscriptions = Subscription.where(user_id: current_user.id)
-    if subscriptions.count < 10
+    if subscriptions.count < 9
       @subscription = Subscription.new
       @subscription.user = current_user
       @subscription.tile = @tile

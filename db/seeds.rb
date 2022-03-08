@@ -223,4 +223,6 @@ tile24.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/
 tile25.photos.attach([{io: URI.open("https://ichef.bbci.co.uk/news/640/cpsprodpb/7E99/production/_96690423_original.jpg"), filename: 'future3.jpeg', content_type: 'image/jpg'}])
 
 puts "Photos seeded!"
+
+puts "Api tiles seeded!"
 puts "DB seeded!"
