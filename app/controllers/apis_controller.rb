@@ -3,6 +3,9 @@ require "open-uri"
 
 class ApisController < ApplicationController
 
+  def db_seed
+  end
+
   def show
     url = build_api_query('top-headlines?q=trump')
     @response = parse_query(url)
@@ -29,7 +32,7 @@ class ApisController < ApplicationController
   def create_tile
     url = build_api_query('top-headlines?q=trump')
     @response = parse_query(url)
-    @tile = Tile.new
+    @tile = Tile.new(tile_params)
     @tile.title = @response["title"]
     @tile.summary = @response["description"]
     @tile.content = @response["content"]
