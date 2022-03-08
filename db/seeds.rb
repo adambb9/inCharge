@@ -106,8 +106,7 @@ tile17 = Tile.create!(title: "Renting in Spain: What’s the maximum amount a la
 #news2
 tile18 = Tile.create!(title: "Roman’s empire: how the seeds of Abramovich’s demise were there all along", summary: "Almost 20 years after his high profile purchase, the oligarch is looking to sell Chelsea. Here’s the story of how it unravelled", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic1.id)
 tile19 = Tile.create!(title: "As U.S. and European businesses cut ties with Russia, Chinese tech firms remain silent", summary: "American firms such as Apple and Disney have reduced their business in Russia after the country invaded Ukraine but Chinese technology firms have remained silent on the issue.", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic1.id)
-#weather
-tile20 = Tile.create!(title: "Barcelona", summary: "Friday 17:00", content: "Partly Cloudy 16°C", subtopic_id: subtopic46.id)
+
 #destination2
 tile21 = Tile.create!(title: "Grand Teton National Park", summary: "Park in Yellowstone & Grand Teton National Parks", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
 tile22 = Tile.create!(title: "Wat Arun", summary: "Top choice Buddhist Temple in Ko Ratanakosin & Thonburi", content: "#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}#{Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)}", subtopic_id: subtopic32.id)
@@ -154,10 +153,6 @@ subscription28 = Subscription.create!(user_id: user4.id, tile_id: tile13.id)
 subscription29 = Subscription.create!(user_id: user4.id, tile_id: tile14.id)
 subscription30 = Subscription.create!(user_id: user4.id, tile_id: tile6.id)
 
-subscription31 = Subscription.create!(user_id: user1.id, tile_id: tile20.id)
-subscription32 = Subscription.create!(user_id: user2.id, tile_id: tile20.id)
-subscription33 = Subscription.create!(user_id: user3.id, tile_id: tile20.id)
-subscription33 = Subscription.create!(user_id: user4.id, tile_id: tile20.id)
 puts "Subscription seeded!"
 
 
