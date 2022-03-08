@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :subtopics, only: [:index, :show, :create] do
     resources :tiles, only: [:index, :destroy]
   end
-  resources :tiles, only: :show do
+  resources :tiles, only: [:new, :create, :show] do
     resources :subscriptions, only: :create
   end
 
