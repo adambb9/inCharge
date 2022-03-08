@@ -13,11 +13,16 @@ class ApisController < ApplicationController
   end
 
   def new
-
+    @tile = Tile.new
   end
 
   def create
-
+    @tile = Tile.new(api_params)
+    if @tile.save!
+      redirect_to tile_path(@tile)
+    else
+      render :new
+    end
   end
 
   def build_api_query(query)
@@ -47,4 +52,9 @@ class ApisController < ApplicationController
     end
   end
 
+  private
+
+  def api_params
+    params.require(:api).permit(:title, :description, :content, :picture_url, :source, :url, subtopic_id: [])
+  end
 end
