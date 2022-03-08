@@ -34,10 +34,10 @@
         </div>
 
     <div class="profile-extrainfo">
-      <h3 id="p1">More info:</h3>
-      <h3 id="p2">Country:</h3>
-      <h3 id="p3">Tile refresh rate: 2x per day</h3>
-      <h3 id="p3">Number of tiles on dashboard: 10</h3>
+      <h3 id="p2">Country: <%= @user.country %></h3>
+      <h3 id="p2">Language: <%= @user.language %></h3>
+      <h3 id="p3">Source refresh rate: <%= @user.refresh_rate %>x per day</h3>
+      <h3 id="p3">Number of tiles on dashboard: <%= @user.num_tiles + 1 %></h3>
     </div>
 
       <div class="panel" id="two-panel">
