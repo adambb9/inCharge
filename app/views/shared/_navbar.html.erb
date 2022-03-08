@@ -15,13 +15,12 @@
         <% if user_signed_in? %>
          <div class="searchrow">
                   <div class="navbar-search" id="search">
-
-              <%= form_tag topics_path, method: :get do %>
-                <%= text_field_tag :query,
-                  params[:query],
-                  class: "form-control",
-                  placeholder: "inCharge focused search ..."
-                %>
+                <%= form_tag tiles_all_path, method: :get do %>
+                  <%= text_field_tag :query,
+                    params[:query],
+                    class: "form-control",
+                    placeholder: "search inCharge"
+                  %>
               <%= submit_tag "Go", class: "btn btn-dark" %>
               <% end %>
           </div>
