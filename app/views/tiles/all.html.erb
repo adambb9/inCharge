@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row mb-5">
+    <% if @tiles.empty? %>
+      <div class="container-tile-title row">
+        <div class="col-6">
+          <h1 class="subheader">Content coming soon ...</h1>
+        </div>
+      </div>
+
+    <% else %>
+      <div class="container-tile-title row">
+        <div class="col-6">
+          <h1 class="subheader"><%= @tiles[0].subtopic.topic.title  %>: <%= @tiles[0].subtopic.title  %></h1>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <% @tiles.each do |tile| %>
+      <div class="col-4">
+        <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path tile.photos[0].key%>);">
+          <div class="big-card-text">
+            <div class="big-card-text2" >
+              <h2><%= tile.title %></h2>
+            </div>
+            <div>
+              <%= link_to "read more", tile_path(tile), class:"btn btn-ghost"%>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+    <% end %>
+</div>

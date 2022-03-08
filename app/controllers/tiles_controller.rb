@@ -13,6 +13,16 @@ class TilesController < ApplicationController
     @tiles = Tile.where(subtopic_id: subtopic_id)
   end
 
+
+  def all
+
+    if params[:query].present?
+      @tiles = Tile.search_by_title_summary_content(params[:query])
+    else
+      @tiles = Tile.all
+    end
+  end
+
   def new
     @tile = Tile.new
   end

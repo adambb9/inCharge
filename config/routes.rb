@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get "/profile", to: "profiles#show"
 
+  get "/tiles/all", to: "tiles#all"
+
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
