@@ -28,6 +28,14 @@
        <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"subscribe-btn"%>
    <% end %>
 
+<div class="suggestions">
+  <%# <h2 id="suggest">here are more suggestions</h2> %>
+  <% @tiles.each do |tile| %>
+    <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path tile.photos[0].key%>);">
+    <h2><%= link_to tile.title, tile_path(tile) %></h2>
+    </div>
+  <% end %>
+</div>
 
    </div>
 </div>

@@ -6,6 +6,8 @@ class TilesController < ApplicationController
   end
 
   def show
+    subtopic_id = @tile.subtopic_id
+    @tiles = Tile.where(subtopic_id: subtopic_id)
   end
 
   private
