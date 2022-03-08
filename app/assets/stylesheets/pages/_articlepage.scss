@@ -1,0 +1,74 @@
+#topinfo {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 95%;
+  padding: 0.5em 0.5em 0em 0em;
+  border-top: 1px solid white;
+}
+
+.article-container {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.articlebox1 {
+  position: absolute;
+  border: 1px solid white;
+  height: 27em;
+  width: 62em;
+}
+
+.article-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+  width: 70%;
+}
+
+.show-card-image {
+  height: 25em;
+  margin-top: 5em;
+}
+
+.text-div {
+  margin-top: 2em;
+  width: 75%;
+}
+
+.subheader {
+  font-size: 1.5em;
+  color: white;
+  width: 70%;
+}
+
+#art-title {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+#art-summ {
+  margin-top: 2em;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  padding: 2em 0em 1em 1em;
+  border-top: 1px solid white;
+}
+
+#art-cont {
+  color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.subscribe-btn {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-height: 10%;
+  border-width: 1px;
+}
