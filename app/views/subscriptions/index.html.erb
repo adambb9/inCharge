@@ -21,25 +21,26 @@
   <div class="line1"></div>
 </div>
 
-     <div class="line2 filtered" ></div>
+     <%# <div class="line2 filtered" ></div> %>
 
 <div class="weather-box">
+  <p>WEATHER IN YOUR CITY<p>
  <div class="container weather-container" data-controller="weather" data-weather-openweather-api-key-value="<%= ENV["OPENWEATHER_API_KEY"] %>">
- <div class="row">
-   <form class="d-flex my-5" data-action="submit->weather#fetchWeather">
-                <input type="text" placeholder="Enter city" class="form-control flex-grow-1" data-weather-target="input">
+ <div class="weather-data">
+   <form class="d-flex my-5 weathersearch" data-action="submit->weather#fetchWeather">
+                <input type="text" placeholder="enter city" class="form-control flex-grow-1" data-weather-target="input">
                 <a href="" class="position" data-action="click->weather#fetchWeatherByCoordinates"><i class="bi bi-geo-alt"></i></a>
                 <input type="submit" value="Search" class="btn btn-primary ms-3 btnWeather">
               </form>
     </div>
-     <div class="row">
+     <div class="wthr-info">
       <h3 class="text-secondary" data-weather-target="date"></h3>
       <p data-weather-target="description"></p>
       </div>
 
        <div class="row">
 
-      <div class="d-flex">
+      <div class="wthr-flex">
         <img class="d-none" src="" alt="Weather Icon" data-weather-target="icon">
          <h2 data-weather-target="temperature"><!-- TODO: TEMPERATURE --></h2>
       </div>
@@ -49,7 +50,7 @@
 </div>
 
 
-<div id="box1"></div>
-<div id="box2"></div>
+<%# <div id="box1"></div>
+<div id="box2"></div> %>
 
 </div>
