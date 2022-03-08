@@ -9,11 +9,16 @@ class ApisController < ApplicationController
   end
 
   def new
-
+    @tile = Tile.new
   end
 
   def create
-
+    @tile = Tile.new(api_params)
+    if @tile.save!
+      redirect_to tile_path(@tile)
+    else
+      render :new
+    end
   end
 
   def build_api_query(query)
@@ -29,12 +34,12 @@ class ApisController < ApplicationController
     url = build_api_query('top-headlines?q=trump')
     @response = parse_query(url)
     @tile = Tile.new
-    @tile.title = @response.title
-    @tile.summary = @repsonse.description
-    @tile.content = @response.content
-    @tile.picture_url = @reponse.urlToImage
-    @tile.source = @response.author
-    @tile.url = @response.url
+    @tile.title = @response["title"]
+    @tile.summary = @repsonse["description"]
+    @tile.content = @response["content"]
+    @tile.picture_url = @reponse["urlToImage"]
+    @tile.source = @response["author"]
+    @tile.url = @response["url"]
     @tile.subtopic_id = 1
     if @tile.save!
       redirect_to tile_path(@tile)
@@ -42,4 +47,9 @@ class ApisController < ApplicationController
     end
   end
 
+  private
+
+  def api_params
+    params.require(:api).permit(:title, :description, :content, :picture_url, :source, :url, subtopic_id: [])
+  end
 end

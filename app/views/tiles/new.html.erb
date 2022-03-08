@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for(@tile) do |f| %>
+    <%= f.input :subtopic %>
+    <%= f.select :language, Tile::LANGUAGE_CATEGORIES, prompt: 'Select language' %>
+    <%= f.submit %>
+  <% end %>
+</div>
