@@ -64,6 +64,10 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
     t.string "title"
     t.text "summary"
     t.text "content"
+    t.string "picture_url"
+    t.string "source"
+    t.string "author"
+    t.string "url"
     t.bigint "subtopic_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
