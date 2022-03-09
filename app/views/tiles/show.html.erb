@@ -10,10 +10,10 @@
       <h1 class="subheader"><%= @tile.subtopic.topic.title  %>: <%= @tile.subtopic.title  %></h1>
         <%=link_to 'Back to all tiles', subtopic_tiles_path(@tile.subtopic_id), class:"animated-border-button"%>
 </div>
-      <% if @tile.picture_url.nil? %>
+      <% if @tile.photos.attached? %>
         <%= cl_image_tag @tile.photos[0].key, class:"show-card-image" %>
         <%# <div class="articlebox1"></div> %>
-      <% else %>
+      <% elsif @tile.picture_url %>
         <%= image_tag @tile.picture_url, class:"show-card-image" %>
       <% end %>
 
@@ -31,10 +31,10 @@
 <div class="suggestions">
   <%# <h2 id="suggest">here are more suggestions</h2> %>
   <% @tiles.each do |tile| %>
-      <% if tile.picture_url.nil? %>
-        <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path tile.photos[0].key%>);">
+      <% if tile.photos.attached? %>
         <%# <div class="articlebox1"></div> %>
-      <% else %>
+        <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path tile.photos[0].key%>);">
+      <% elsif tile.picture_url %>
        <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= image_path tile.picture_url%>);">
       <% end %>
 
