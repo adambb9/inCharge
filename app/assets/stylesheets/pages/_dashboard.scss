@@ -1,7 +1,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto repeat(12, 1fr);
+  // grid-template-rows: auto repeat(12, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   height: auto;
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding: 6px 16px 52px 24px;
+  padding: 38px 16px 52px 24px;
   color: white;
   flex-direction: row-reverse;
   flex-wrap: wrap;
@@ -208,9 +208,28 @@
 
 .topicsCard:nth-child(10){
   grid-column: span 2;
+  grid-row: span 1;
   // height: 100%;
   // width: 100%;
   // padding-bottom: 2em;
+}
+
+.topicsCard:nth-child(11){
+  grid-column: span 1;
+  grid-row: span 1;
+  // height: 100%;
+  // width: 100%;
+  // padding-bottom: 2em;
+}
+
+.topicsCard:nth-child(12){
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.topicsCard:nth-child(13){
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
 // Weather section

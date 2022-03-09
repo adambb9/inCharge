@@ -11,7 +11,7 @@ Subtopic.destroy_all
 Tile.destroy_all
 puts "DB Cleaned"
 
-user1 = User.create!(first_name: "John", last_name: "Jones", email: "jj@gmail.com", password: "Hello1")
+user1 = User.create!(first_name: "John", last_name: "Jones", email: "jj@gmail.com", password: "Hello1", num_tiles: 13)
 user2 = User.create!(first_name: "Ben", last_name: "Dover", email: "bd@gmail.com", password: "Hello1")
 user3 = User.create!(first_name: "Moe", last_name: "Sizlak", email: "moe@gmail.com", password: "Hello1")
 user4 = User.create!(first_name: "Harry", last_name: "Cane", email: "harry@gmail.com", password: "Hello1")
@@ -19,7 +19,7 @@ puts "User seeded"
 
 topic1 = Topic.create!(title: "News")
 topic2 = Topic.create!(title: "Weather")
-topic3 = Topic.create!(title: "Sport")
+topic3 = Topic.create!(title: "Sport") 
 topic4 = Topic.create!(title: "Culture")
 topic5 = Topic.create!(title: "Finance")
 topic6 = Topic.create!(title: "Travelling")
