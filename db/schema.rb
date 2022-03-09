@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
     t.string "source"
     t.string "author"
     t.string "url"
+    t.string "language"
+    t.string "country"
     t.bigint "subtopic_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

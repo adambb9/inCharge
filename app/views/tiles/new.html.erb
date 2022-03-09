@@ -1,6 +1,8 @@
 <div class="container">
   <%= simple_form_for(@tile) do |f| %>
     <%= f.association :subtopic %>
+    <%= f.select :language, Tile::LANG_CATEGORIES, prompt: 'Select Language' %>
+    <%= f.select :country, Tile::COUNTRY_CATEGORIES, prompt: 'Select Country' %>
     <%= f.submit %>
   <% end %>
 </div>
