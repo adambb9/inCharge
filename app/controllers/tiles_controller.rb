@@ -30,7 +30,7 @@ class TilesController < ApplicationController
   def create
     @tile = Tile.new(tile_params)
     subtopic = Subtopic.find(params[:tile][:subtopic_id])
-<
+
     query = subtopic.title
     language = @tile.language
     country = @tile.country

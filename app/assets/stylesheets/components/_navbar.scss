@@ -49,10 +49,6 @@
   height: 2em;
 }
 
-#search {
-  color: azure;
-  box-shadow: none;
-}
 
 .dropdown-menu.show {
   background-color: #363D2F;
@@ -73,10 +69,31 @@
 .btn-outline-secondary {
   border-radius: 0px;
   border-color: white;
+  border-right: none;
+}
 
+.btn-outline-secondary:focus {
+  box-shadow: none;
 }
 
 .btn-dark {
   border: 1px solid white;
   border-left: none;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.barquery {
+  border-right: none;
+}
+
+
+.btn-dark:hover .btn-dark:focus .btn-dark:active {
+  background-color: transparent;
+}
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: white;
 }

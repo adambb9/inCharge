@@ -7,6 +7,7 @@
   height: auto;
   width: 91%;
   margin: auto;
+  margin-top: 4em;
   }
 
 .topicsCard {
@@ -60,7 +61,7 @@
   color: white;
   grid-row: 1;
   grid-column-start: 4;
-  grid-column-end: 5;
+  grid-column-end: 6;
   margin-top: 2em;
 }
 
@@ -244,16 +245,18 @@
   border-right: 1px solid white;
   color: white;
   text-align: center;
+}
 
-
-  .form-control {
+  .weather-box .form-control {
     color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
+    margin-right: -16px;
   } .form-control:focus {
     color: white;
     border-color: white;
+    margin-right: -16px;
   }
-}
+
 
 .weather-data {
   padding-top: 0%;
@@ -273,15 +276,15 @@
   height: 2em;
 }
 
-.btnWeather {
-  background-color: transparent;
-  text-decoration: underline;
-  color: white;
-}
+// .btnWeather {
+//   background-color: transparent;
+//   text-decoration: underline;
+//   color: white;
+// }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: transparent !important;
-  border-color: transparent;
+  border: 1px solid white;
 }
 
 .weather-container {
