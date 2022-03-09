@@ -57,7 +57,9 @@ subtopic23 = Subtopic.create!(title: "Events", topic_id: topic4.id)
 subtopic24 = Subtopic.create!(title: "Investing", topic_id: topic5.id)
 subtopic25 = Subtopic.create!(title: "Cryptos", topic_id: topic5.id)
 subtopic26 = Subtopic.create!(title: "Mortgages", topic_id: topic5.id)
+
 #TRAVELLING = ["Hotels", "Flights", "Deals", "Events"]
+
 subtopic28 = Subtopic.create!(title: "Hotels", topic_id: topic6.id)
 subtopic29 = Subtopic.create!(title: "Flights", topic_id: topic6.id)
 subtopic30 = Subtopic.create!(title: "Deals", topic_id: topic6.id)
