@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_120443) do
+ActiveRecord::Schema.define(version: 2022_03_09_092412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,11 +68,11 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
     t.string "source"
     t.string "author"
     t.string "url"
-    t.string "language"
-    t.string "country"
     t.bigint "subtopic_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "language"
+    t.string "country"
     t.index ["subtopic_id"], name: "index_tiles_on_subtopic_id"
   end
 
@@ -85,10 +85,6 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "language", default: "en", null: false
-    t.string "country", default: "us", null: false
-    t.integer "refresh_rate", default: 2, null: false
-    t.integer "num_tiles", default: 9, null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -96,6 +92,10 @@ ActiveRecord::Schema.define(version: 2022_03_01_120443) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "country", default: "us"
+    t.string "language", default: "en"
+    t.integer "refresh_rate", default: 2
+    t.integer "num_tiles", default: 9
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
