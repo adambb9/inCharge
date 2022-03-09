@@ -25,6 +25,8 @@ class Tile < ApplicationRecord
     query = self.subtopic.title
     url = build_api_query(query)
     response = parse_query(url)
+    return if response.nil?
+
     self.title = response["title"]
     self.summary = response["description"]
     self.content = response["content"]
