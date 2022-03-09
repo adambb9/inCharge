@@ -20,4 +20,28 @@ class Tile < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+
+  def refresh_data
+    query = self.subtopic.title
+    url = build_api_query(query)
+    response = parse_query(url)
+    self.title = response["title"]
+    self.summary = response["description"]
+    self.content = response["content"]
+    self.picture_url = response["urlToImage"]
+    self.source = response["source"]["name"]
+    self.author = response["author"]
+    self.url = response["url"]
+  end
+
+  private
+
+  def build_api_query(query)
+    url = "https://newsapi.org/v2/top-headlines?q=#{query}&pageSize=1&apiKey=8d87341021534a57b58acbaf56e2aaaf"
+  end
+
+  def parse_query(url)
+    response = URI.open(url).read
+    JSON.parse(response)["articles"][0]
+  end
 end
