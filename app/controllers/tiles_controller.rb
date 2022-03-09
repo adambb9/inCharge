@@ -30,6 +30,28 @@ class TilesController < ApplicationController
   def create
     @tile = Tile.new(tile_params)
     subtopic = Subtopic.find(params[:tile][:subtopic_id])
+<
+    query = subtopic.title
+    language = @tile.language
+    country = @tile.country
+    url = build_api_query(query, language, country)
+    response = parse_query(url)
+    if response.nil?
+      redirect_to topics_path
+      flash[:alert] = "Sorry no results search again!"
+      return
+    end
+    @tile.title = response["title"]
+    @tile.summary = response["description"]
+    @tile.content = response["content"]
+    if @tile.picture_url.nil?
+      @tile.picture_url = "https://cdn.mos.cms.futurecdn.net/FaWKMJQnr2PFcYCmEyfiTm.jpg"
+    else
+      @tile.picture_url = response["urlToImage"]
+    end
+    @tile.source = response["source"]["name"]
+    @tile.author = response["author"]
+    @tile.url = response["url"]
     @tile.subtopic = subtopic
     @tile.refresh_data
 
@@ -60,5 +82,9 @@ class TilesController < ApplicationController
     params.require(:tile).permit(:subtopic, :language, :country)
   end
 
+
+  def build_api_query(query, language, country)
+    url = "https://newsapi.org/v2/top-headlines?q=#{query}&language=#{language}&country=#{country}&pageSize=1&apiKey=8d87341021534a57b58acbaf56e2aaaf"
+  end
 
 end

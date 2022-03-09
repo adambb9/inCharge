@@ -2,8 +2,13 @@
 
 
   <% @subscriptions.each_with_index do |subscription, index| %>
+    <% if subscription.tile.picture_url.nil? %>
+      <div class="card-img topicsCard topicsCard-<%=index%>" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path subscription.tile.photos[0].key%>);">
+    <% else %>
+      <div class="card-img topicsCard topicsCard-<%=index%>" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= image_path subscription.tile.picture_url%>);">
 
-  <div class="card-img topicsCard topicsCard-<%=index%>" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path subscription.tile.photos[0].key%>);">
+    <% end %>
+
    <p class="topic-indicator"><%= subscription.tile.subtopic.title %></p>
     <h2><%= link_to subscription.tile.title, subscription_path(subscription) %></h2>
     <h3><%#= subscription.tile.summary %></h3>
