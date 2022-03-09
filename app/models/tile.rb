@@ -22,24 +22,24 @@ class Tile < ApplicationRecord
     }
 
   def refresh_data
-    query = self.subtopic.title
-    url = build_api_query(query)
+    url = build_api_query
     response = parse_query(url)
     return if response.nil?
 
     self.title = response["title"]
     self.summary = response["description"]
     self.content = response["content"]
-    self.picture_url = response["urlToImage"]
+    self.picture_url = response["urlToImage"] || "https://cdn.mos.cms.futurecdn.net/FaWKMJQnr2PFcYCmEyfiTm.jpg"
     self.source = response["source"]["name"]
     self.author = response["author"]
     self.url = response["url"]
+    self
   end
 
   private
 
-  def build_api_query(query)
-    url = "https://newsapi.org/v2/top-headlines?q=#{query}&pageSize=1&apiKey=8d87341021534a57b58acbaf56e2aaaf"
+  def build_api_query
+    url = "https://newsapi.org/v2/top-headlines?q=#{subtopic.title}&language=#{language || 'en'}&country=#{country || 'us' }&pageSize=1&apiKey=#{ENV['NEWS_API_KEY2']}"
   end
 
   def parse_query(url)
