@@ -11,6 +11,7 @@ class TilesController < ApplicationController
   def show
     subtopic_id = @tile.subtopic_id
     @tiles = Tile.where(subtopic_id: subtopic_id)
+    @subscription = Subscription.where(tile_id: @tile, user_id: current_user)
   end
 
 

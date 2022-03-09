@@ -5,7 +5,11 @@
     <br>
     <h1 id="title">be inCharge</h1>
     <br>
-    <h2 id="sub-title">sign up<%= link_to " here ", topics_path, class:"welcome-btn"%>today!</h2>
+    <% if current_user.nil? %>
+      <h2 id="sub-title">sign up<%= link_to " here ", topics_path, class:"welcome-btn"%>today!</h2>
+    <% else %>
+      <h2 id="sub-title">Hey, <%= current_user.first_name %>! See your top stories <%= link_to " here ", subscriptions_path, class:"welcome-btn"%>!</h2>
+    <% end %>
 
 <%
 =begin %>

@@ -22,7 +22,7 @@
   </div>
   <div class="row">
     <% @tiles.each do |tile| %>
-      <div class="col-4">
+      <div class="col-4 mb-3">
         <% if tile.picture_url.nil? %>
           <div class="big-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path tile.photos[0].key%>);">
         <% else %>
