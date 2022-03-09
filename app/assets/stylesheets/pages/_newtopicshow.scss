@@ -159,3 +159,45 @@
 .sticky-stack dd + dt {
   margin-top: 1rem;
 }
+
+.mosaic_form {
+  padding: 64px 15px 24px;
+  margin: 0 auto;
+}
+
+#tile_subtopic_id {
+  height: 3em;
+  font-size: small;
+  border: none;
+  padding: 4px;
+  border-radius: 0px;
+  margin-bottom: 1em;
+}
+
+#tile_language {
+  width: 100%;
+  height: 3em;
+  font-size: small;
+  border: none;
+  padding: 3px;
+  margin-bottom: 1em;
+}
+
+#tile_country  {
+  width: 100%;
+  height: 3em;
+  font-size: small;
+  border: none;
+  padding: 3px;
+  margin-bottom: 1em;
+}
+
+.submitnewtile {
+  width: 100%;
+  height: 3em;
+  font-size: small;
+  border: none;
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 1em;
+}

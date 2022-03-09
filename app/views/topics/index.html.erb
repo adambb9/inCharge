@@ -10,12 +10,12 @@
       <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.mos.cms.futurecdn.net/FaWKMJQnr2PFcYCmEyfiTm.jpg')">
         <div class="card-mosaic-text">
           <div class="container-sticky" id="tall">
-            <dl class="sticky-stack" id="new-tile">
+            <dl class="sticky-stack mosaic_form" id="new-tile">
             <%= simple_form_for(@tile) do |f| %>
-              <%= f.association :subtopic %>
+              <%= f.association :subtopic, prompt: 'Select Topic' %>
               <%= f.select :language, Tile::LANG_CATEGORIES, prompt: 'Select Language' %>
               <%= f.select :country, Tile::COUNTRY_CATEGORIES, prompt: 'Select Country' %>
-              <%= f.submit %>
+              <%= f.submit class: "submitnewtile" %>
             <% end %>
             </dl>
           </div>
