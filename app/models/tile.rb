@@ -39,7 +39,7 @@ class Tile < ApplicationRecord
   private
 
   def build_api_query
-    url = "https://newsapi.org/v2/top-headlines?q=#{subtopic.title}&language=#{language || 'en'}&country=#{country || 'us' }&pageSize=1&apiKey=#{ENV["NEWS_API_KEY"]}"
+    url = "https://newsapi.org/v2/top-headlines?q=#{subtopic.title}&language=#{language || 'en'}&country=#{country || 'us' }&pageSize=1&apiKey=#{ENV['NEWS_API_KEY2']}"
   end
 
   def parse_query(url)
