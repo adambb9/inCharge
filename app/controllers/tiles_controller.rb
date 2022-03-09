@@ -30,6 +30,7 @@ class TilesController < ApplicationController
   def create
     @tile = Tile.new(tile_params)
     subtopic = Subtopic.find(params[:tile][:subtopic_id])
+
     @tile.subtopic = subtopic
     @tile.refresh_data
 
