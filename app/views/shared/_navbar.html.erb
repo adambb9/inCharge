@@ -16,12 +16,18 @@
          <div class="searchrow">
                   <div class="navbar-search" id="search">
                 <%= form_tag tiles_all_path, method: :get do %>
-                  <%= text_field_tag :query,
+
+                <div class="input-group mb-3">
+                <%= text_field_tag :query,
                     params[:query],
                     class: "form-control",
                     placeholder: "search inCharge"
                   %>
-              <%= submit_tag "Go", class: "btn btn-dark" %>
+                  <div class="input-group-append">
+                  <%= submit_tag "Go", class: "btn btn-dark" %>
+                  </div>
+                </div>
+                  
               <% end %>
           </div>
           </div>

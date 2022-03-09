@@ -19,7 +19,7 @@ puts "User seeded"
 
 topic1 = Topic.create!(title: "News")
 topic2 = Topic.create!(title: "Weather")
-topic3 = Topic.create!(title: "Sport")
+topic3 = Topic.create!(title: "Sport") 
 topic4 = Topic.create!(title: "Culture")
 topic5 = Topic.create!(title: "Finance")
 topic6 = Topic.create!(title: "Travelling")
@@ -57,7 +57,9 @@ subtopic23 = Subtopic.create!(title: "Events", topic_id: topic4.id)
 subtopic24 = Subtopic.create!(title: "Investing", topic_id: topic5.id)
 subtopic25 = Subtopic.create!(title: "Cryptos", topic_id: topic5.id)
 subtopic26 = Subtopic.create!(title: "Mortgages", topic_id: topic5.id)
- #TRAVELLING = ["Hotels", "Flights", "Deals", "Events"]
+
+#TRAVELLING = ["Hotels", "Flights", "Deals", "Events"]
+
 subtopic28 = Subtopic.create!(title: "Hotels", topic_id: topic6.id)
 subtopic29 = Subtopic.create!(title: "Flights", topic_id: topic6.id)
 subtopic30 = Subtopic.create!(title: "Deals", topic_id: topic6.id)
@@ -86,6 +88,7 @@ subtopic49 = Subtopic.create!(title: "General", topic_id: topic1.id)
 subtopic50 = Subtopic.create!(title: "Health", topic_id: topic1.id)
 subtopic51 = Subtopic.create!(title: "Science", topic_id: topic1.id)
 subtopic52 = Subtopic.create!(title: "Technology", topic_id: topic1.id)
+
 puts "Subtopic seeded"
 #Tiles
 #News
@@ -214,7 +217,6 @@ tile17.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/
 tile18.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646382763/inCharge/2021-01-25T132108Z_167137623_RC21FL9XYKXQ_RTRMADP_3_SOCCER-ENGLAND-LAMPARD_yc2eib.jpg"), filename: 'worldnews2.jpeg', content_type: 'image/jpg'}])
 
 tile19.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646382822/inCharge/150615095702-alibaba-780x439_blrlkg.jpg"), filename: 'worldnews3.jpeg', content_type: 'image/jpg'}])
-
 
 tile21.photos.attach([{io: URI.open("https://res.cloudinary.com/dpauqhmri/image/upload/v1646384854/inCharge/shutterstockRF_325784873.jpg_xu4eey.jpg"), filename: 'destination2.jpeg', content_type: 'image/jpg'}])
 tile22.photos.attach([{io: URI.open("https://lp-cms-production.imgix.net/2020-11/500pxRF_241509159.jpg?auto=compress&crop=center&fit=crop&format=auto&h=832&w=1920"), filename: 'destination3.jpeg', content_type: 'image/jpg'}])
