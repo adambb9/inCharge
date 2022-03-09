@@ -15,8 +15,8 @@ a:hover {
 #title {
   font-size: 120px;
   color: white;
-  animation: flip 2s infinite;
-  animation-delay: calc(.2s * var(--i))
+  animation: flip 8s infinite;
+  animation-delay: calc(2s * var(--i))
 }
 @keyframes flip {
   0%,80% {

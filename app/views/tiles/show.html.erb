@@ -24,20 +24,28 @@
           <br>
           <p id="art-cont"><%= @tile.content %></p>
     </div>
-
-       <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"subscribe-btn"%>
+        <% if @subscription.nil? %>
+          <%=link_to 'Subscribe', tile_subscriptions_path(@tile), method: :post, class:"subscribe-btn"%>
+        <% else %>
+          <%= link_to "Unsubscribe", subscription_path(@subscription), method: :delete, data: { confirm: "Click OK to unsubscribe and pick a new topic for your feed!" }, class: "subscribe-btn" %>
+        <% end %>
    <% end %>
 
 <div class="suggestions">
   <%# <h2 id="suggest">here are more suggestions</h2> %>
-  <% @tiles.each do |tile| %>
+  <% @tiles.each_with_index do |tile, index| %>
+    <% if tile == @tile %>
+      <% next %>
+    <% elsif index == 3 %>
+      <% break %>
+    <% else %>
       <% if tile.photos.attached? %>
         <%# <div class="articlebox1"></div> %>
         <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path tile.photos[0].key%>);">
       <% elsif tile.picture_url %>
-       <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= image_path tile.picture_url%>);">
+        <div class="card-img articleTopicsCard" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= image_path tile.picture_url%>);">
       <% end %>
-
+    <% end %>
     <h2><%= link_to tile.title, tile_path(tile) %></h2>
     </div>
   <% end %>
