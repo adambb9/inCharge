@@ -1,22 +1,166 @@
 <div class="container">
-  <div class="containerTitleTopic row">
-  <div class="col-6 mb-5">
-    <h2>Choose your topics</h2>
-  </div>
-</div>
-
- <% @topics.each do |topic| %>
-      <div class="container subtopicContainer">
-      <div class="row">
-          <div class="col cardSubtopic">
-             <strong><%= topic.title %></strong>
-             <small ><%= link_to topic_subtopics_path(topic) do %>
-              <i class="fa fa-plus" aria-hidden="true"></i>
-             <% end %>
-             </small>
-            </div>
-          <hr>
-        </div>
+  <div class="containerTitle row mt-2">
+    <div class="col-6">
+      <h2>Choose your sources, be inCharge!</h2>
     </div>
-  <% end %>
+    <div class="col-6">
+      <%=link_to 'Back to topics', topics_path, class: "animated-border-button"%>
+    </div>
+  </div>
+  <div class="image-mosaic">
+    <div class="card-mosaic card-mosaic-tall card-mosaic-wide">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.mos.cms.futurecdn.net/FaWKMJQnr2PFcYCmEyfiTm.jpg')">
+          <div>Create your own tile here!</div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.mos.cms.futurecdn.net/FaWKMJQnr2PFcYCmEyfiTm.jpg')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky" id="tall">
+            <dl class="sticky-stack" id="new-tile">
+            <%= simple_form_for(@tile) do |f| %>
+              <%= f.association :subtopic %>
+              <%= f.select :language, Tile::LANG_CATEGORIES, prompt: 'Select Language' %>
+              <%= f.select :country, Tile::COUNTRY_CATEGORIES, prompt: 'Select Country' %>
+              <%= f.submit %>
+            <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic-tall card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/566/800/530')">
+        <div><%= @topics[0].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/566/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky" id="tall">
+            <dl class="sticky-stack">
+              <% @topics[0].subtopics.each do |subtopic| %>
+                <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/575/800/530')">
+        <div><%= @topics[2].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/575/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[2].subtopics.each do |subtopic| %>
+                  <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/626/800/530')">
+        <div><%= @topics[3].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/626/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[3].subtopics.each do |subtopic| %>
+                  <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/667/800/530')">
+        <div><%= @topics[4].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/667/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[4].subtopics.each do |subtopic| %>
+                <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/678/800/530')">
+        <div><%= @topics[5].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/678/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[5].subtopics.each do |subtopic| %>
+                  <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic-wide card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/695/800/530')">
+        <div><%= @topics[6].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/695/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[6].subtopics.each do |subtopic| %>
+                  <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/683/800/530')">
+        <div><%= @topics[7].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/683/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[7].subtopics.each do |subtopic| %>
+                  <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+             </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-mosaic card-mosaic-wide card-mosaic-flip">
+      <div class="card-mosaic-side front" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/693/800/530')">
+        <div><%= @topics[8].title %></div>
+      </div>
+      <div class="card-mosaic-side back" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://picsum.photos/id/693/800/530')">
+        <div class="card-mosaic-text">
+          <div class="container-sticky">
+            <dl class="sticky-stack">
+              <% @topics[8].subtopics.each do |subtopic| %>
+                  <dd id="span-id"><%= link_to "#{subtopic.title}", subtopic_tiles_path(subtopic), class:"sibling-fade" %></dd>
+              <% end %>
+             </dl>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

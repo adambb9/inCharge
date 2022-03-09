@@ -115,6 +115,15 @@
   overflow-y: auto;
 }
 
+#new-tile {
+  color: #fff;
+  margin: 0;
+  height: 400px;
+  border-radius: 1rem;
+  overflow-y: auto;
+
+}
+
 .sticky-stack dt {
   position: sticky;
   top: 0;

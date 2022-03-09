@@ -1,6 +1,7 @@
 class SubtopicsController < ApplicationController
   before_action :set_subtopic, only: [:show]
   def index
+    @tile = Tile.new
     @topics = Topic.all
     @subtopics = Subtopic.where(topic_id: params[:topic_id])
   end
