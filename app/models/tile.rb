@@ -1,5 +1,8 @@
 class Tile < ApplicationRecord
 
+  LANG_CATEGORIES = ["de", "en", "es", "fr", "nl", "pt"]
+  COUNTRY_CATEGORIES = ["au", "be", "br", "ca", "de", "fr", "gb", "nl", "us"]
+
   belongs_to :subtopic
   has_many_attached :photos
 

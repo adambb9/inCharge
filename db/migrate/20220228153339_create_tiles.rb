@@ -8,6 +8,8 @@ class CreateTiles < ActiveRecord::Migration[6.1]
       t.string :source
       t.string :author
       t.string :url
+      t.string :language
+      t.string :country
       t.references :subtopic, null: false, foreign_key: true
 
       t.timestamps

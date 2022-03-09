@@ -65,7 +65,7 @@ class TilesController < ApplicationController
   end
 
   def tile_params
-    params.require(:tile).permit(:subtopic)
+    params.require(:tile).permit(:subtopic, :language, :country)
   end
 
   def build_api_query(query)
