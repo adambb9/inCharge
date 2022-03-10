@@ -14,9 +14,7 @@ class TilesController < ApplicationController
     @subscription = current_user.subscriptions.find_by(tile: @tile)
   end
 
-
   def all
-
     if params[:query].present?
       @tiles = Tile.search_by_title_summary_content(params[:query])
     else
