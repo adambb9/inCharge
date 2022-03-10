@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2022_03_09_092412) do
     t.string "title"
     t.text "summary"
     t.text "content"
-    t.text "picture_url"
+    t.string "picture_url"
     t.string "source"
     t.string "author"
     t.string "url"

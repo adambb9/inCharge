@@ -23,6 +23,7 @@
   align-content: flex-end;
   overflow: hidden;
   text-decoration: none;
+  position: relative;
 }
 
 .card-img {
@@ -180,7 +181,7 @@
 .topicsCard:nth-child(7) {
   grid-column: span 3;
   padding-bottom: 19%;
-  padding-right: 19%;
+  padding-right: 28%;
   z-index: 1000;
   // height: 18em;
   // width: 35em;
@@ -299,10 +300,17 @@
   justify-content: space-between;
 }
 
-.read-more {
-  margin-right: 9px;
+.unsubscribe {
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
 }
 
-.Unsubscribe {
-  margin-bottom: 9px;
+.unsubscribe img {
+  width: 15px;
+  opacity: 0.7;
+}
+
+.unsubscribe:hover {
+  opacity: 0.5;
 }

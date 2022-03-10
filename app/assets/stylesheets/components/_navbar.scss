@@ -59,6 +59,10 @@
   text-align: right;
 }
 
+.dropdown-menu:hover .dropdown-menu.show {
+  display: block;
+}
+
 
 .searchrow {
   width: 57em;
