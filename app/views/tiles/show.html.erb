@@ -34,10 +34,10 @@
 <div class="suggestions">
   <%# <h2 id="suggest">here are more suggestions</h2> %>
   <% @tiles.each_with_index do |tile, index| %>
-    <% if tile == @tile %>
-      <% next %>
-    <% elsif index == 3 %>
+    <% if index == 3 %>
       <% break %>
+    <% elsif tile == @tile %>
+      <% next %>
     <% else %>
       <% if tile.photos.attached? %>
         <%# <div class="articlebox1"></div> %>
@@ -52,4 +52,5 @@
 </div>
 
    </div>
+</div>
 </div>
