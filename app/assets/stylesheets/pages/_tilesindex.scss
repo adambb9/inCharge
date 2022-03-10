@@ -10,20 +10,21 @@
 }
 
 .big-card-text {
-  padding: 25px;
+  padding: 80px 25px 61px 25px;
   display: flex;
   color: white;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   font-size: small;
-
 }
 
-.big-card > img {
+.big-card img {
   height: 200px;
   width: 100%;
-  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .big-card h2 {
@@ -43,4 +44,8 @@
   color: white;
   border-color: white;
   border-radius: 0%;
+}
+
+.btn-ghost:hover {
+  background-color: white;
 }
