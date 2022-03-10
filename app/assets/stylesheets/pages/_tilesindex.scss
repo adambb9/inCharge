@@ -10,12 +10,14 @@
 }
 
 .big-card-text {
-  padding: 16px;
+  padding: 25px;
   display: flex;
   color: white;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  font-size: small;
+
 }
 
 .big-card > img {
