@@ -47,7 +47,6 @@ class SubscriptionsController < ApplicationController
   end
 
   def destroy
-    raise
     @subscription.destroy
     redirect_to topics_path
   end
