@@ -88,7 +88,7 @@
 }
 
 
-.btn-dark:hover .btn-dark:focus .btn-dark:active {
+.btn-dark:hover .btn-dark:active {
   background-color: transparent;
 }
 
@@ -96,4 +96,12 @@
   color: #fff;
   background-color: transparent;
   border-color: white;
+}
+
+.btn-dark:focus {
+  border-right: none;
+}
+
+.btn-dark:active {
+  border-right: none;
 }
