@@ -137,7 +137,7 @@ subscription2 = Subscription.create!(user_id: user1.id, tile_id: tile2.id)
 subscription3 = Subscription.create!(user_id: user1.id, tile_id: tile14.id)
 subscription4 = Subscription.create!(user_id: user1.id, tile_id: tile4.id)
 subscription5 = Subscription.create!(user_id: user1.id, tile_id: tile5.id)
-subscription6 = Subscription.create!(user_id: user1.id, tile_id: tile7.id)
+subscription6 = Subscription.create!(user_id: user1.id, tile_id: tile15.id)
 subscription7 = Subscription.create!(user_id: user1.id, tile_id: tile11.id)
 
 subscription8 = Subscription.create!(user_id: user2.id, tile_id: tile10.id)
