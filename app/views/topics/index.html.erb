@@ -12,7 +12,7 @@
           <div class="container-sticky" id="tall">
             <dl class="sticky-stack mosaic_form" id="new-tile">
             <%= simple_form_for(@tile) do |f| %>
-              <%= f.association :subtopic, prompt: 'Select Topic' %>
+              <%= f.association :subtopic, prompt: 'Select Topic', collection: Subtopic.all.order('title DESC') %>
               <%= f.select :language, Tile::LANG_CATEGORIES, prompt: 'Select Language' %>
               <%= f.select :country, Tile::COUNTRY_CATEGORIES, prompt: 'Select Country' %>
               <%= f.submit class: "submitnewtile" %>
