@@ -27,22 +27,22 @@ class TilesController < ApplicationController
   end
 
   def create
-    #@tile = Tile.new(tile_params)
-    #subtopic = Subtopic.find(params[:tile][:subtopic_id])
+    @tile = Tile.new(tile_params)
+    subtopic = Subtopic.find(params[:tile][:subtopic_id])
 
-    #@tile.subtopic = subtopic
+    @tile.subtopic = subtopic
 
-    @backup_tile = Tile.create(title: "Scientists Map the Dark Matter Web Surrounding the Milky Way", summary: "A new simulation aims to determine whether the standard view of dark matter can explain how unique our galaxy’s neighborhood is.", content: "In the 1980s and ’90s, when Carlos Frenk worked on some of the first theories of cold dark matter—“cold” refers to the invisible particles’ relatively slow speed—he thought the idea wouldn’t last very long. He and his colleagues had already tested a theory of faster-moving 'hot' dark matter, the possibility that it is made of particles like neutrinos, and quickly ruled it out. Instead, the theory of cold dark matter became astrophysicists’ 'standard model' for two decades, a mantle it still carries. Now Frenk’s trying to poke holes in his cold dark-matter theory again. With a new simulation, he hopes to tackle open questions which may or may not be answered in the theory’s favor. 'That's how science works. One of my ambitions today is to shoot down the theory I’ve worked on,' says Frenk, an astrophysicist at Durham University in the United Kingdom.Frenk and his colleagues at Durham and in Helsinki, Finland, just completed the first part of a computer simulation of the dark-matter universe; it’s dubbed the Simulations Beyond the Local Universe project, or SIBELIUS, after the Finnish composer. The project was led by Stuart McAlpine and Till Sawala, both of whom previously conducted research with Frenk at Durham. Theirs isn’t just any dark-matter simulation, but one with galaxies modeled in it, providing a detailed, three-dimensional picture of what our galaxy and our corner of the universe likely looks like—if the standard view of cold dark matter is right. They published their new research this month.")
-    @backup_tile.picture_url = "https://cdn.eso.org/images/screen/eso0932a.jpg"
-    @backup_tile.url = "https://www.wired.com/story/scientists-map-the-dark-matter-web-surrounding-the-milky-way/"
-    @backup_tile.subtopic_id = 48
-    #@tile.refresh_data
+    #@backup_tile = Tile.create(title: "Scientists Map the Dark Matter Web Surrounding the Milky Way", summary: "A new simulation aims to determine whether the standard view of dark matter can explain how unique our galaxy’s neighborhood is.", content: "In the 1980s and ’90s, when Carlos Frenk worked on some of the first theories of cold dark matter—“cold” refers to the invisible particles’ relatively slow speed—he thought the idea wouldn’t last very long. He and his colleagues had already tested a theory of faster-moving 'hot' dark matter, the possibility that it is made of particles like neutrinos, and quickly ruled it out. Instead, the theory of cold dark matter became astrophysicists’ 'standard model' for two decades, a mantle it still carries. Now Frenk’s trying to poke holes in his cold dark-matter theory again. With a new simulation, he hopes to tackle open questions which may or may not be answered in the theory’s favor. 'That's how science works. One of my ambitions today is to shoot down the theory I’ve worked on,' says Frenk, an astrophysicist at Durham University in the United Kingdom.Frenk and his colleagues at Durham and in Helsinki, Finland, just completed the first part of a computer simulation of the dark-matter universe; it’s dubbed the Simulations Beyond the Local Universe project, or SIBELIUS, after the Finnish composer. The project was led by Stuart McAlpine and Till Sawala, both of whom previously conducted research with Frenk at Durham. Theirs isn’t just any dark-matter simulation, but one with galaxies modeled in it, providing a detailed, three-dimensional picture of what our galaxy and our corner of the universe likely looks like—if the standard view of cold dark matter is right. They published their new research this month.")
+    #@backup_tile.picture_url = "https://cdn.eso.org/images/screen/eso0932a.jpg"
+    #@backup_tile.url = "https://www.wired.com/story/scientists-map-the-dark-matter-web-surrounding-the-milky-way/"
+    #@backup_tile.subtopic_id = 48
+    @tile.refresh_data
 
-    if @backup_tile.title.nil?
+    if @tile.title.nil?
       flash[:alert] = "Sorry no results search again!"
       redirect_to topics_path
-    elsif @backup_tile.save
-      redirect_to tile_path(@backup_tile)
+    elsif @tile.save
+      redirect_to tile_path(@tile)
     else
       render :new
     end
